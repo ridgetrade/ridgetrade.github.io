@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var duration = 300;
+    var duration = 200;
 
     // images ----------------------------------------
     var $images = $('#images p');
@@ -9,7 +9,7 @@ $(document).ready(function () {
         .on('mouseover', function () {
             $(this).find('strong').stop(true).animate({ bottom: '0px' }, duration);
             $(this).find('span').stop(true).animate({ opacity: 1 }, duration);
-            $(this).find('img').stop(true).animate({ top: '0px' }, duration * 1.3);
+            $(this).find('img').stop(true).animate({ top: '0px' }, duration);
         })
         .on('mouseout', function () {
             $(this).find('strong').stop(true).animate({ bottom: '-60px' }, duration);
@@ -17,17 +17,17 @@ $(document).ready(function () {
             $(this).find('img').stop(true).animate({ top: '0px' }, duration);
         });
 
-    $(".dropdown-menu a").click(function (e) {
-        e.preventDefault();
-        var url = this.href;
+    // $(".dropdown-menu a").click(function (e) {
+    //     e.preventDefault();
+    //     var url = this.href;
      
-        $("#content2")
-            .hide()
-            .load(url)
-            .delay(100)
-            .fadeIn(200)
+    //     $("#content2")
+    //         .hide()
+    //         .load(url)
+    //         .delay(100)
+    //         .fadeIn(200)
       
-    });
+    // });
 
     //   $images.filter(':nth-child(1)')
     //   .on('mouseover', function(){

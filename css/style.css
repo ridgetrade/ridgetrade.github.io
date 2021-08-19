@@ -1,93 +1,96 @@
-
-
 .carousel-inner>.item {
-  height: 450px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 body {
-  background-color: #fdffdb;
-  overflow: scroll;
+    overflow: scroll;
 }
 
+.upmenu {
+    margin: 5px;
+    margin-bottom: 80px;
+}
 
+.info2 {
+    float: right;
+    position: relative;
+}
+
+.info3 {
+    position: absolute;
+}
 
 .main {
-
-  background-color:rgba(255, 165 , 0, 1);
+    background-color: rgba(255, 165, 0, 1);
 }
-
 
 .nav-link {
-  position: relative;
+    position: relative;
 }
+
 
 /*
  * Base
  */
 
-
- img {
-  vertical-align: middle;
-}
-
 button {
-  outline: none;
+    outline: none;
 }
 
 #easing {
-  background-color: #019faa;
+    background-color: #019faa;
 }
 
-
-
 #images p {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  margin: 0 auto 80px;
+    position: relative;
+    width: 380px;
+    height: 380px;
+    margin: 20px;
 }
 
 #images p strong {
-  color: #fff;
-  font-size: 20px;
+    color: #fff;
+    font-size: 20px;
 }
 
-
 #images p {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 #images p strong {
-  position: absolute;
-  display: block;
-  z-index: 1;
-  bottom: 0;
-  width: 640px;
-  height: 60px;
-  background: rgba(0, 0, 0, 0.0);
-  text-align: left;
-  padding: 20px
+    position: absolute;
+    display: block;
+    z-index: 1;
+    bottom: 0;
+    width: 540px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.0);
+    text-align: left;
+    padding: 20px
 }
 
 #images .img strong {
-  bottom: -60px;
-  background: rgba(34, 34, 34, 0.7);
+    bottom: -60px;
+    background: rgba(34, 34, 34, 0.7);
 }
 
 #images .img img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
+    width: 100%;
+    height: 100%;
+    top: 0px;
 }
-.img:hover {transition: all 0.6s;} 
 
-.img:hover{transform: scale(1.05);}
+.img:hover {
+    transition: all 0.2s;
+}
 
-.img{
-  transition:0.6s all;
- }
+.img:hover {
+    transform: scale(1.03);
+}
 
+.img {
+    transition: 0.2s all;
+}
