@@ -46,9 +46,9 @@
         #images p {
             position: relative;
             overflow: hidden;
-            width: 380px;
-            height: 380px;
-            margin: 15px;
+            width: 320px;
+            height: 320px;
+            margin: 15px auto;
         }
         
         #images p strong {
@@ -58,6 +58,7 @@
         
         .img2 {
             position: absolute;
+            opacity: 0;
         }
         
         .img1 {

@@ -8,13 +8,13 @@ $(document).ready(function() {
     $images
         .on('mouseover', function() {
             $(this).find('strong').stop(true).animate({ bottom: '0px' }, duration);
-            $(this).find('.img1').stop(true).animate({ opacity: '0' }, duration);
+            $(this).find('.img2').stop(true).animate({ opacity: '1' }, duration);
 
 
         })
         .on('mouseout', function() {
             $(this).find('strong').stop(true).animate({ bottom: '-60px' }, duration);
-            $(this).find('.img1').stop(true).animate({ opacity: '1' }, duration);
+            $(this).find('.img2').stop(true).animate({ opacity: '0' }, duration);
 
         });
 
