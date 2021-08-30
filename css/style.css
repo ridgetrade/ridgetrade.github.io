@@ -48,7 +48,7 @@
             overflow: hidden;
             width: 320px;
             height: 320px;
-            margin: 15px auto;
+            margin: 5px auto;
         }
         
         #images p strong {
@@ -70,15 +70,15 @@
             display: block;
             z-index: 1;
             bottom: 0;
-            width: 540px;
-            height: 60px;
+            width: 330px;
+            height: 80px;
             background: rgba(0, 0, 0, 0.0);
             text-align: left;
             padding: 20px
         }
         
         #images .img strong {
-            bottom: -60px;
+            bottom: -80px;
             background: rgba(34, 34, 34, 0.4);
         }
         

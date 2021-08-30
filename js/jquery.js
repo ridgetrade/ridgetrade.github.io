@@ -13,7 +13,7 @@ $(document).ready(function() {
 
         })
         .on('mouseout', function() {
-            $(this).find('strong').stop(true).animate({ bottom: '-60px' }, duration);
+            $(this).find('strong').stop(true).animate({ bottom: '-80px' }, duration);
             $(this).find('.img2').stop(true).animate({ opacity: '0' }, duration);
 
         });
