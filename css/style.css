@@ -7,12 +7,12 @@
         
         body {
             overflow: scroll;
-            background-color: cornsilk;
+            background-color: rgb(255, 255, 255);
         }
         
         .upmenu {
             margin: 5px;
-            margin-bottom: 80px;
+            margin-bottom: -80px;
         }
         
         .info2 {
@@ -48,7 +48,7 @@
             overflow: hidden;
             width: 320px;
             height: 320px;
-            margin: 5px auto;
+            margin: 20px auto;
         }
         
         #images p strong {
@@ -74,12 +74,12 @@
             height: 80px;
             background: rgba(0, 0, 0, 0.0);
             text-align: left;
-            padding: 20px
+            padding: 12px
         }
         
         #images .img strong {
             bottom: -80px;
-            background: rgba(34, 34, 34, 0.4);
+            background: rgba(34, 34, 34, 0.6);
         }
         
         #images .img img {
