@@ -78,7 +78,7 @@
         }
         
         #images .img strong {
-            bottom: -80px;
+            bottom: 0px;
             background: rgba(34, 34, 34, 0.6);
         }
         
