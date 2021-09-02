@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
     var duration = 200;
 
     // images ----------------------------------------
