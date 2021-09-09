@@ -7,7 +7,7 @@ $(function() {
 
     $images
         .on('mouseover', function() {
-            $(this).find('strong').stop(true).animate({ bottom: '-80px' }, duration);
+            $(this).find('strong').stop(true).animate({ bottom: '-70px' }, duration);
             $(this).find('.img2').stop(true).animate({ opacity: '1' }, duration);
         })
 
