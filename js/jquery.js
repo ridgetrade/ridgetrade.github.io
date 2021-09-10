@@ -18,9 +18,9 @@ $(function() {
 
         .on('click', function() {
             $(this).find('strong').stop(true).animate({ bottom: '0px' }, duration);
-            $(this).find('.img2').stop(true).animate({ opacity: '1' }, duration);
         });
    
+
     // $images
     // .on('mouseover', function() {
     //     $(this).find('strong').stop(true).animate({ bottom: '0px' }, duration);
