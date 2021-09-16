@@ -99,3 +99,8 @@
         .img {
             transition: 0.2s all;
         }
+
+        .active {
+            color:#019faa;
+            background-color: blue;
+        }

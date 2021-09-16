@@ -4,7 +4,6 @@ $(function() {
     // images ----------------------------------------
     var $images = $('#images p');
 
-
     $images
         .on('mouseover', function() {
             $(this).find('strong').stop(true).animate({ bottom: '-70px' }, duration);
@@ -19,8 +18,8 @@ $(function() {
         .on('click', function() {
             $(this).find('strong').stop(true).animate({ bottom: '0px' }, duration);
         });
-   
 
+      
     // $images
     // .on('mouseover', function() {
     //     $(this).find('strong').stop(true).animate({ bottom: '0px' }, duration);
