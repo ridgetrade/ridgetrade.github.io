@@ -1,13 +1,31 @@
 {
 	"folders": [
 		{
-			"path": "..\\..\\Documents\\GitHub\\ridgetrade.github.io"
+			"path": "..\\web測試"
 		},
 		{
-			"path": "..\\..\\Documents\\GitHub"
+			"path": "..\\web測試\\ridgetrade.github.io\\.vscode"
+		},
+		{
+			"path": "..\\web測試\\ridgetrade.github.io\\__MACOSX"
+		},
+		{
+			"path": "..\\web測試\\ridgetrade.github.io\\css"
+		},
+		{
+			"path": "..\\web測試\\ridgetrade.github.io\\default"
+		},
+		{
+			"path": "..\\web測試\\ridgetrade.github.io\\img"
+		},
+		{
+			"path": "..\\web測試\\ridgetrade.github.io\\js"
+		},
+		{
+			"path": "..\\web測試\\ridgetrade.github.io\\ridge971128"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "ridgetrade.github.io"
+		"liveServer.settings.multiRootWorkspaceName": "web測試"
 	}
 }
