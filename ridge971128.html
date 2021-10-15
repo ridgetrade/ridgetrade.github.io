@@ -92,9 +92,9 @@
                         document.getElementById("shop").value += ("\n" + this.name + this.summary + " 價格 $" + this.price + " 數量 " + this.quantity + "\"&CHAR(10)&\"");
                     });
                     document.getElementById("shop").value = ("=\"" + document.getElementById("shop").value + "\"&CHAR(10)&\"Total Price: " + totalPrice + "\"&CHAR(10)&\"Total Quantity: " + totalQuantity + "\"")
-                    alert("\n" + "1.請填寫聯絡方式或寄送地點會有專人聯絡報價" + "\n" + "2.價格以報價為主" + "\n" + "3.實際可出貨數量依現貨而定")
+                    alert("\n" + "1. 實際價格以報價為主" + "\n" + "2. 同系列商品隨機出貨" + "\n" + "3. 實際可出貨數量依現貨而定，售完為止" + "\n" + "4. 請填寫聯絡方式或寄送地點會有專人聯絡報價")
                     console.log("checking out");
-                    $(".badge,.allmenu,.goods1,.goods2,.goods3,.goods4,.goods5,.goods6,.goods7,.goods8,.goods9,.goods10,.goods11,.goods12,.goods13,.goods14,.goods15,.goods16,.goods17,.goods18").hide();
+                    $(".badge,.shopcart,.allmenu,.goods1,.goods2,.goods3,.goods4,.goods5,.goods6,.goods7,.goods8,.goods9,.goods10,.goods11,.goods12,.goods13,.goods14,.goods15,.goods16,.goods17,.goods18").hide();
                     $("form,#content2")
                         .delay(300)
                         .fadeIn(250);
@@ -117,6 +117,7 @@
     <div class="page-header">
         <h1>
             <div style="float: right; cursor: pointer;">
+                <div class="shopcart"><img src="img/cart.png"></div>
                 <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span
                         class="badge badge-notify my-cart-badge"></span></span>
             </div>
@@ -200,6 +201,12 @@
 
     <div class="container goods1">
         <div class="row">
+            <!-- 新品 -->
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/鬼滅/44210708 鬼滅之刃太陽能點頭娃娃 440_1.jpg" class="img1"><img src="img/鬼滅/44210708 鬼滅之刃太陽能點頭娃娃 440_2.jpg" class="img2"><strong>44210708 太陽能點頭娃娃<br>批發價 $440</strong></p>
+                <button class="btn btn-danger my-cart-btn" data-id="44210708" data-name="44210708 太陽能點頭娃娃" data-price="440" data-quantity="1" data-image="img/鬼滅/44210708 鬼滅之刃太陽能點頭娃娃 440_1.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/4_1.jpg" class="img1"><img src="img/鬼滅/4_2.jpg" class="img2"><strong>44210845 排隊系列<br>批發價 $65</strong></p>
                 <button class="btn btn-danger my-cart-btn" data-id="44210845" data-name="44210845 排隊系列" data-price="65" data-quantity="1" data-image="img/鬼滅/4_1.jpg">購入<img class="plus" src="img/+1.png"></button>
@@ -211,119 +218,145 @@
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/02210404  鬼滅之刃功能提袋 $175_1.jpg" class="img1"><img src="img/鬼滅/02210404  鬼滅之刃功能提袋 $175_2.jpg" class="img2"><strong>02210404 功能提袋<br>批發價
                         $175</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="02210404" data-name="02210404 功能提袋" data-price="175" data-quantity="1" data-image="img/鬼滅/02210404  鬼滅之刃功能提袋 $175_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="02210404" data-name="02210404 功能提袋" data-price="175" data-quantity="1" data-image="img/鬼滅/02210404  鬼滅之刃功能提袋 $175_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/02210403  鬼滅之刃文青提袋 $175_1.jpg" class="img1"><img src="img/鬼滅/02210403  鬼滅之刃文青提袋 $175_2.jpg" class="img2"><strong>02210403 文青提袋<br>批發價
                         $175</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="02210403" data-name="02210403 文青提袋" data-price="175" data-quantity="1" data-image="img/鬼滅/02210403  鬼滅之刃文青提袋 $175_2.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="02210403" data-name="02210403 文青提袋" data-price="175" data-quantity="1" data-image="img/鬼滅/02210403  鬼滅之刃文青提袋 $175_2.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/鬼滅/58201101 鬼滅之刃透明帆布包A款 450_1.jpg" class="img1"><img src="img/鬼滅/58201101 鬼滅之刃透明帆布包A款 450_2.jpg" class="img2"><strong>58201101 透明帆布包A款<br>批發價
+                        $450</strong></p>
+                <button class="btn btn-danger my-cart-btn" data-id="58201101" data-name="58201101 透明帆布包A款" data-price="450" data-quantity="1" data-image="img/鬼滅/58201101 鬼滅之刃透明帆布包A款 450_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/鬼滅/58201214 鬼滅之刃簡約單寧托特包A款 415_1.jpg" class="img1"><img src="img/鬼滅/58201214 鬼滅之刃簡約單寧托特包A款 415_2.jpg" class="img2"><strong>58201214 簡約單寧托特包A款<br>批發價 $415</strong></p>
+                <button class="btn btn-danger my-cart-btn" data-id="58201214" data-name="58201214 簡約單寧托特包A款" data-price="415" data-quantity="1" data-image="img/鬼滅/58201214 鬼滅之刃簡約單寧托特包A款 415_1.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+
+
+
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/8_1.jpg" class="img1"><img src="img/鬼滅/8_2.jpg" class="img2"><strong>21210612 鬼滅之刃桌上型梳妝台<br>批發價 $690</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="21210612" data-name="21210612 鬼滅之刃桌上型梳妝台" data-price="690" data-quantity="1" data-image="img/鬼滅/8_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="21210612" data-name="21210612 鬼滅之刃桌上型梳妝台" data-price="690" data-quantity="1" data-image="img/鬼滅/8_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/21210615 鬼滅之刃收納盒24 350_1.jpg" class="img1"><img src="img/鬼滅/21210615 鬼滅之刃收納盒24 350_2.jpg" class="img2"><strong>21210615 鬼滅之刃收納盒<br>批發價
                         $350</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="21210615" data-name="21210615 鬼滅之刃收納盒" data-price="350" data-quantity="1" data-image="img/鬼滅/21210615 鬼滅之刃收納盒24 350_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="21210615" data-name="21210615 鬼滅之刃收納盒" data-price="350" data-quantity="1" data-image="img/鬼滅/21210615 鬼滅之刃收納盒24 350_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/7_1.jpg" class="img1"><img src="img/鬼滅/7_2.jpg" class="img2"><strong>44210705 坐姿絨毛娃娃<br>批發價 $420</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="44210705" data-name="44210705 坐姿絨毛娃娃" data-price="420" data-quantity="1" data-image="img/鬼滅/7_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="44210705" data-name="44210705 坐姿絨毛娃娃" data-price="420" data-quantity="1" data-image="img/鬼滅/7_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/6_1.jpg" class="img1"><img src="img/鬼滅/6_2.jpg" class="img2"><strong>44210707 鬼滅之刃絨毛娃娃<br>批發價 320$</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="44210707" data-name="44210707 鬼滅之刃絨毛娃娃" data-price="320" data-quantity="1" data-image="img/鬼滅/6_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="44210707" data-name="44210707 鬼滅之刃絨毛娃娃" data-price="320" data-quantity="1" data-image="img/鬼滅/6_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
-            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/鬼滅/44210806 絆之裝-竈門禰豆子 $400.jpg" class="img1"><img src="img/鬼滅/442108 絆之裝.jpg" class="img2"><strong>44210806 絆之裝-竈門禰豆子<br>批發價 400$</strong>
-                </p><button class="btn btn-danger my-cart-btn" data-id="44210806" data-name="44210806 絆之裝-竈門禰豆子" data-price="400" data-quantity="1" data-image="img/鬼滅/44210806 絆之裝-竈門禰豆子 $400.jpg">購入<img class="plus" src="img/+1.png"></button></button>
-            </div>
-            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/鬼滅/44210819 絆之裝-宇髓天元 $400.jpg" class="img1"><img src="img/鬼滅/442108 絆之裝.jpg" class="img2"><strong>44210819 絆之裝-宇髓天元<br>批發價 400$</strong>
-                </p><button class="btn btn-danger my-cart-btn" data-id="44210819" data-name="44210819 絆之裝-宇髓天元" data-price="400" data-quantity="1" data-image="img/鬼滅/44210819 絆之裝-宇髓天元 $400.jpg">購入<img class="plus" src="img/+1.png"></button></button>
-            </div>
-            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/鬼滅/44210821 絆之裝-甘露寺蜜璃 $400.jpg" class="img1"><img src="img/鬼滅/442108 絆之裝.jpg" class="img2"><strong>44210821 絆之裝-甘露寺蜜璃<br>批發價 400$</strong>
-                </p><button class="btn btn-danger my-cart-btn" data-id="44210821" data-name="44210821 絆之裝-甘露寺蜜璃" data-price="400" data-quantity="1" data-image="img/鬼滅/44210821 絆之裝-甘露寺蜜璃 $400.jpg">購入<img class="plus" src="img/+1.png"></button></button>
-            </div>
-            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/鬼滅/44210820 絆之裝-時透無一郎 $400.jpg" class="img1"><img src="img/鬼滅/442108 絆之裝.jpg" class="img2"><strong>44210820 絆之裝-時透無一郎<br>批發價 400$</strong>
-                </p><button class="btn btn-danger my-cart-btn" data-id="44210820" data-name="44210820 絆之裝-時透無一郎" data-price="400" data-quantity="1" data-image="img/鬼滅/44210820 絆之裝-時透無一郎 $400.jpg">購入<img class="plus" src="img/+1.png"></button></button>
-            </div>
-            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/鬼滅/44210818 絆之裝-煉獄杏壽郎 $400.jpg" class="img1"><img src="img/鬼滅/442108 絆之裝.jpg" class="img2"><strong>44210818 絆之裝-煉獄杏壽郎<br>批發價 400$</strong>
-                </p><button class="btn btn-danger my-cart-btn" data-id="44210818" data-name="44210818 絆之裝-煉獄杏壽郎" data-price="400" data-quantity="1" data-image="img/鬼滅/44210818 絆之裝-煉獄杏壽郎 $400.jpg">購入<img class="plus" src="img/+1.png"></button></button>
-            </div>
-            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/鬼滅/44210806 絆之裝-悲鳴嶼行冥 $400.jpg" class="img1"><img src="img/鬼滅/442108 絆之裝.jpg" class="img2"><strong>44210806 絆之裝-悲鳴嶼行冥<br>批發價 400$</strong>
-                </p><button class="btn btn-danger my-cart-btn" data-id="44210806" data-name="44210806 絆之裝-悲鳴嶼行冥" data-price="400" data-quantity="1" data-image="img/鬼滅/44210806 絆之裝-悲鳴嶼行冥 $400.jpg">購入<img class="plus" src="img/+1.png"></button></button>
-            </div>
+
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/02210401  鬼滅之刃皮質後格筆袋 $130_1.jpg" class="img1"><img src="img/鬼滅/02210401  鬼滅之刃皮質後格筆袋 $130_2.jpg" class="img2"><strong>02210401 皮質後格筆袋<br>批發價
                         $130</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="02210401" data-name="02210401 鬼滅之刃皮質後格筆袋" data-price="130" data-quantity="1" data-image="img/鬼滅/02210401  鬼滅之刃皮質後格筆袋 $130_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="02210401" data-name="02210401 鬼滅之刃皮質後格筆袋" data-price="130" data-quantity="1" data-image="img/鬼滅/02210401  鬼滅之刃皮質後格筆袋 $130_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/2_1.jpg" class="img1"><img src="img/鬼滅/2_2.jpg" class="img2"><strong>02210302 皮質三拉鍊筆袋<br>批發價 $115</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="02210302" data-name="02210302 皮質三拉鍊筆袋" data-price="115" data-quantity="1" data-image="img/鬼滅/2_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="02210302" data-name="02210302 皮質三拉鍊筆袋" data-price="115" data-quantity="1" data-image="img/鬼滅/2_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/02210407  鬼滅之刃面紙套零錢包 $85_1.jpg" class="img1"><img src="img/鬼滅/02210407  鬼滅之刃面紙套零錢包 $85_2.jpg" class="img2"><strong>02210407 面紙套零錢包<br>批發價
                         $85</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="02210407" data-name="02210407 面紙套零錢包" data-price="85" data-quantity="1" data-image="img/鬼滅/02210407  鬼滅之刃面紙套零錢包 $85_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="02210407" data-name="02210407 面紙套零錢包" data-price="85" data-quantity="1" data-image="img/鬼滅/02210407  鬼滅之刃面紙套零錢包 $85_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/鬼滅/02210406  鬼滅之刃短夾 $125_1.jpg" class="img1"><img src="img/鬼滅/02210406  鬼滅之刃短夾 $125_2.jpg" class="img2"><strong>02210406 短夾<br>$批發價125</strong>
-                </p><button class="btn btn-danger my-cart-btn" data-id="02210406" data-name="02210406 鬼滅之刃短夾" data-price="125" data-quantity="1" data-image="img/鬼滅/02210406  鬼滅之刃短夾 $125_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <p class="img"><img src="img/鬼滅/02210406  鬼滅之刃短夾 $125_1.jpg" class="img1"><img src="img/鬼滅/02210406  鬼滅之刃短夾 $125_2.jpg" class="img2"><strong>02210406 短夾<br>批發價 $125</strong>
+                </p><button class="btn btn-danger my-cart-btn" data-id="02210406" data-name="02210406 鬼滅之刃短夾" data-price="125" data-quantity="1" data-image="img/鬼滅/02210406  鬼滅之刃短夾 $125_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
+
+
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/鬼滅/02210303 鬼滅之刃糖果零錢包 80_1.jpg" class="img1"><img src="img/鬼滅/02210303 鬼滅之刃糖果零錢包 80_2.jpg" class="img2"><strong>02210303 糖果零錢包<br>批發價 $80</strong>
+                </p><button class="btn btn-danger my-cart-btn" data-id="02210303" data-name="02210303 糖果零錢包" data-price="80" data-quantity="1" data-image="img/鬼滅/02210303 鬼滅之刃糖果零錢包 80_1.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/鬼滅/02210405 鬼滅之刃長皮夾 140_1.jpg" class="img1"><img src="img/鬼滅/02210405 鬼滅之刃長皮夾 140_2.jpg" class="img2"><strong>02210405 長皮夾<br>批發價 $140</strong>
+                </p><button class="btn btn-danger my-cart-btn" data-id="02210405" data-name="02210405 長皮夾" data-price="140" data-quantity="1" data-image="img/鬼滅/02210405 鬼滅之刃長皮夾 140_1.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+
+
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/02210408  鬼滅之刃胖型自動橡擦(24) $18.jpg" class="img1"><strong>02210408
                         胖型自動橡擦<br>批發價 $18</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="02210408" data-name="02210408 胖型自動橡擦" data-price="18" data-quantity="1" data-image="img/鬼滅/02210408  鬼滅之刃胖型自動橡擦(24) $18.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="02210408" data-name="02210408 胖型自動橡擦" data-price="18" data-quantity="1" data-image="img/鬼滅/02210408  鬼滅之刃胖型自動橡擦(24) $18.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/1_1.jpg" class="img1"><img src="img/鬼滅/1_2.jpg" class="img2"><strong>02210411 滾輪橡皮擦<br>批發價 $18</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="02210411" data-name="02210411 滾輪橡皮擦" data-price="18" data-quantity="1" data-image="img/鬼滅/1_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="02210411" data-name="02210411 滾輪橡皮擦" data-price="18" data-quantity="1" data-image="img/鬼滅/1_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/02210409  鬼滅之刃6入木頭鉛筆 $30_1.jpg" class="img1"><img src="img/鬼滅/02210409  鬼滅之刃6入木頭鉛筆 $30_2.jpg" class="img2"><strong>02210409
                         6入木頭鉛筆<br>$批發價30</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="02210409" data-name="02210409 6入木頭鉛筆" data-price="30" data-quantity="1" data-image="img/鬼滅/02210409  鬼滅之刃6入木頭鉛筆 $30_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="02210409" data-name="02210409 6入木頭鉛筆" data-price="30" data-quantity="1" data-image="img/鬼滅/02210409  鬼滅之刃6入木頭鉛筆 $30_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/02210410  鬼滅之刃12入盒裝木頭鉛筆 $55_1.jpg" class="img1"><img src="img/鬼滅/02210410  鬼滅之刃12入盒裝木頭鉛筆 $55_2.jpg" class="img2"><strong>02210410 12入盒裝木頭鉛筆<br>批發價
                         $55</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="02210410" data-name="02210410 12入盒裝木頭鉛筆" data-price="55" data-quantity="1" data-image="02210410  鬼滅之刃12入盒裝木頭鉛筆 $55_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="02210410" data-name="02210410 12入盒裝木頭鉛筆" data-price="55" data-quantity="1" data-image="02210410  鬼滅之刃12入盒裝木頭鉛筆 $55_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/5_1.jpg" class="img1"><img src="img/鬼滅/5_2.jpg" class="img2"><strong>02210402 硬殼筆袋<br>批發價 $140</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="02210402" data-name="02210402 硬殼筆袋" data-price="140" data-quantity="1" data-image="img/鬼滅/5_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="02210402" data-name="02210402 硬殼筆袋" data-price="140" data-quantity="1" data-image="img/鬼滅/5_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/02210415  鬼滅之刃PP橫式文件夾 $50_1.jpg" class="img1"><img src="img/鬼滅/02210415  鬼滅之刃PP橫式文件夾 $50_2.jpg" class="img2"><strong>02210415 PP橫式文件夾<br>批發價
                         $50</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="02210415" data-name="02210415 PP橫式文件夾" data-price="50" data-quantity="1" data-image="img/鬼滅/02210415  鬼滅之刃PP橫式文件夾 $50_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="02210415" data-name="02210415 PP橫式文件夾" data-price="50" data-quantity="1" data-image="img/鬼滅/02210415  鬼滅之刃PP橫式文件夾 $50_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/02210118  鬼滅之刃15公分溝引尺(36)$15_1.jpg" class="img1"><img src="img/鬼滅/02210118  鬼滅之刃15公分溝引尺(36)$15_2.jpg" class="img2"><strong>02210118 15公分溝引尺<br>批發價
                         $15</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="02210118" data-name="02210118 15公分溝引尺" data-price="15" data-quantity="1" data-image="img/鬼滅/02210118  鬼滅之刃15公分溝引尺(36)$15_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="02210118" data-name="02210118 15公分溝引尺" data-price="15" data-quantity="1" data-image="img/鬼滅/02210118  鬼滅之刃15公分溝引尺(36)$15_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/02210305 鬼滅之刃大開窗雙層鐵筆盒 $65_1.jpg" class="img1"><img src="img/鬼滅/02210305 鬼滅之刃大開窗雙層鐵筆盒 $65_2.jpg" class="img2"><strong>02210305 大開窗雙層鐵筆盒<br>批發價
                         $65</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="02210305" data-name="02210305 大開窗雙層鐵筆盒" data-price="65" data-quantity="1" data-image="img/鬼滅/02210305 鬼滅之刃大開窗雙層鐵筆盒 $65_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="02210305" data-name="02210305 大開窗雙層鐵筆盒" data-price="65" data-quantity="1" data-image="img/鬼滅/02210305 鬼滅之刃大開窗雙層鐵筆盒 $65_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/02210308 鬼滅之刃泡殼文具組 $75_1.jpg" class="img1"><img src="img/鬼滅/02210308 鬼滅之刃泡殼文具組 $75_2.jpg" class="img2"><strong>02210308 泡殼文具組<br>批發價
                         $75</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="02210308" data-name="02210308 泡殼文具組" data-price="75" data-quantity="1" data-image="img/鬼滅/02210308 鬼滅之刃泡殼文具組 $75_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="02210308" data-name="02210308 泡殼文具組" data-price="75" data-quantity="1" data-image="img/鬼滅/02210308 鬼滅之刃泡殼文具組 $75_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/鬼滅/45210401 DT鬼滅之刃小汽車 $210_1.jpg" class="img1"><img src="img/鬼滅/45210401 DT鬼滅之刃小汽車 $210_2.jpg" class="img2"><strong>45210401 DT小汽車<br>批發價
                         $210</strong></p>
-                <button class="btn btn-danger my-cart-btn" data-id="45210401" data-name="45210401 DT小汽車" data-price="210" data-quantity="1" data-image="img/鬼滅/45210401 DT鬼滅之刃小汽車 $210_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <button class="btn btn-danger my-cart-btn" data-id="45210401" data-name="45210401 DT小汽車" data-price="210" data-quantity="1" data-image="img/鬼滅/45210401 DT鬼滅之刃小汽車 $210_1.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/鬼滅/44210806 絆之裝-竈門禰豆子 $400.jpg" class="img1"><img src="img/鬼滅/442108 絆之裝.jpg" class="img2"><strong>44210806 絆之裝-竈門禰豆子<br>批發價 400$</strong>
+                </p><button class="btn btn-danger my-cart-btn" data-id="44210806" data-name="44210806 絆之裝-竈門禰豆子" data-price="400" data-quantity="1" data-image="img/鬼滅/44210806 絆之裝-竈門禰豆子 $400.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/鬼滅/44210819 絆之裝-宇髓天元 $400.jpg" class="img1"><img src="img/鬼滅/442108 絆之裝.jpg" class="img2"><strong>44210819 絆之裝-宇髓天元<br>批發價 400$</strong>
+                </p><button class="btn btn-danger my-cart-btn" data-id="44210819" data-name="44210819 絆之裝-宇髓天元" data-price="400" data-quantity="1" data-image="img/鬼滅/44210819 絆之裝-宇髓天元 $400.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/鬼滅/44210821 絆之裝-甘露寺蜜璃 $400.jpg" class="img1"><img src="img/鬼滅/442108 絆之裝.jpg" class="img2"><strong>44210821 絆之裝-甘露寺蜜璃<br>批發價 400$</strong>
+                </p><button class="btn btn-danger my-cart-btn" data-id="44210821" data-name="44210821 絆之裝-甘露寺蜜璃" data-price="400" data-quantity="1" data-image="img/鬼滅/44210821 絆之裝-甘露寺蜜璃 $400.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/鬼滅/44210820 絆之裝-時透無一郎 $400.jpg" class="img1"><img src="img/鬼滅/442108 絆之裝.jpg" class="img2"><strong>44210820 絆之裝-時透無一郎<br>批發價 400$</strong>
+                </p><button class="btn btn-danger my-cart-btn" data-id="44210820" data-name="44210820 絆之裝-時透無一郎" data-price="400" data-quantity="1" data-image="img/鬼滅/44210820 絆之裝-時透無一郎 $400.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/鬼滅/44210818 絆之裝-煉獄杏壽郎 $400.jpg" class="img1"><img src="img/鬼滅/442108 絆之裝.jpg" class="img2"><strong>44210818 絆之裝-煉獄杏壽郎<br>批發價 400$</strong>
+                </p><button class="btn btn-danger my-cart-btn" data-id="44210818" data-name="44210818 絆之裝-煉獄杏壽郎" data-price="400" data-quantity="1" data-image="img/鬼滅/44210818 絆之裝-煉獄杏壽郎 $400.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/鬼滅/44210806 絆之裝-悲鳴嶼行冥 $400.jpg" class="img1"><img src="img/鬼滅/442108 絆之裝.jpg" class="img2"><strong>44210806 絆之裝-悲鳴嶼行冥<br>批發價 400$</strong>
+                </p><button class="btn btn-danger my-cart-btn" data-id="44210806" data-name="44210806 絆之裝-悲鳴嶼行冥" data-price="400" data-quantity="1" data-image="img/鬼滅/44210806 絆之裝-悲鳴嶼行冥 $400.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
         </div>
     </div>
@@ -334,38 +367,57 @@
         <div class="row">
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/小新/1_1.jpg" class="img1"><img src="img/小新/1_2.jpg" class="img2"><strong>21210305 小新抱枕<br>批發價 $890</strong></p><button class="btn btn-danger my-cart-btn" data-id="21210305" data-name="21210305 小新抱枕" data-price="890" data-quantity="1"
-                    data-image="img/小新/1_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                    data-image="img/小新/1_1.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <!-- 本類 -->
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/小新/05211004 蠟筆小新2022年曆 90_1.jpg" class="img1"><img src="img/小新/05211004 蠟筆小新2022年曆 90_2.jpg" class="img2"><strong>05211004 小新2022年曆<br>批發價 $90</strong></p><button class="btn btn-danger my-cart-btn" data-id="05211004" data-name="05211004 小新2022年曆"
+                    data-price="90" data-quantity="1" data-image="img/小新/05211004 蠟筆小新2022年曆 90_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/小新/2_1.jpg" class="img1"><img src="img/小新/2_2.jpg" class="img2"><strong>00210301 木製造型筆筒<br>批發價 $190</strong></p><button class="btn btn-danger my-cart-btn" data-id="00210301" data-name="00210301 木製造型筆筒" data-price="190" data-quantity="1"
-                    data-image="img/小新/2_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <p class="img"><img src="img/小新/05200805 蠟筆小新16K橫線筆記本 20_1.jpg" class="img1"><img src="img/小新/05200805 蠟筆小新16K橫線筆記本 20_2.jpg" class="img2"><strong>05200805 16K橫線筆記本<br>批發價 $20</strong></p><button class="btn btn-danger my-cart-btn" data-id="05200805"
+                    data-name="05200805 16K橫線筆記本" data-price="20" data-quantity="1" data-image="img/小新/05200805 蠟筆小新16K橫線筆記本 20_1.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/小新/05211011 蠟筆小新便利貼本 70_1.jpg" class="img1"><img src="img/小新/05211011 蠟筆小新便利貼本 70_2.jpg" class="img2"><strong>05211011 小新便利貼本<br>批發價 $70</strong></p><button class="btn btn-danger my-cart-btn" data-id="05211011" data-name="05211011 蠟筆小新便利貼本"
+                    data-price="70" data-quantity="1" data-image="img/小新/05211011 蠟筆小新便利貼本 70_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/小新/5_1.jpg" class="img1"><img src="img/小新/5_2.jpg" class="img2"><strong>05210301 果凍透明筆袋<br>批發價 $85</strong></p><button class="btn btn-danger my-cart-btn" data-id="05210301" data-name="05210301 果凍透明筆袋" data-price="85" data-quantity="1"
-                    data-image="img/小新/5_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                    data-image="img/小新/5_1.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <!-- 筆類 -->
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/小新/2_1.jpg" class="img1"><img src="img/小新/2_2.jpg" class="img2"><strong>00210301 木製造型筆筒<br>批發價 $190</strong></p><button class="btn btn-danger my-cart-btn" data-id="00210301" data-name="00210301 木製造型筆筒" data-price="190" data-quantity="1"
+                    data-image="img/小新/2_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/小新/3.jpg"><strong>00210617 票卡貼<br>批發價 $30</strong></p><button class="btn btn-danger my-cart-btn" data-id="00210617" data-name="00210617 票卡貼" data-price="30" data-quantity="1" data-image="img/小新/3.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                <p class="img"><img src="img/小新/3.jpg"><strong>00210617 票卡貼<br>批發價 $30</strong></p><button class="btn btn-danger my-cart-btn" data-id="00210617" data-name="00210617 票卡貼" data-price="30" data-quantity="1" data-image="img/小新/3.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/小新/4_1.jpg" class="img1"><img src="img/小新/4_2.jpg" class="img2"><strong>05201001 72K便條紙<br>批發價 $22</strong></p><button class="btn btn-danger my-cart-btn" data-id="05201001" data-name="05201001 72K便條紙" data-price="22" data-quantity="1"
-                    data-image="img/小新/4_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                    data-image="img/小新/4_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
+            <!-- 袋類 -->
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/小新/6_1.jpg" class="img1"><img src="img/小新/6_2.jpg" class="img2"><strong>05201201 Light飲料袋<br>批發價 $85</strong></p><button class="btn btn-danger my-cart-btn" data-id="05201201" data-name="05201201 Light飲料袋" data-price="85"
-                    data-quantity="1" data-image="img/小新/6_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                    data-quantity="1" data-image="img/小新/6_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/小新/05210506  蠟筆小新EcoBag $145_1.jpg" class="img1"><img src="img/小新/05210506  蠟筆小新EcoBag $145_2.jpg" class="img2"><strong>05210506 EcoBag<br>批發價
-                        $145</strong></p><button class="btn btn-danger my-cart-btn" data-id="05210506" data-name="05210506 EcoBag" data-price="145" data-quantity="1" data-image="img/小新/05210506  蠟筆小新EcoBag $145_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $145</strong></p><button class="btn btn-danger my-cart-btn" data-id="05210506" data-name="05210506 EcoBag" data-price="145" data-quantity="1" data-image="img/小新/05210506  蠟筆小新EcoBag $145_1.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/小新/05211016 蠟筆小新美耐皿圓盤 110_1.jpg" class="img1"><img src="img/小新/05211016 蠟筆小新美耐皿圓盤 110_2.jpg" class="img2"><strong>05211016 美耐皿圓盤<br>批發價 $110</strong></p><button class="btn btn-danger my-cart-btn" data-id="05211016" data-name="05211016 美耐皿圓盤"
+                    data-price="110" data-quantity="1" data-image="img/小新/05211016 蠟筆小新美耐皿圓盤 110_1.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/小新/05211015 蠟筆小新玻璃杯 90_1.jpg" class="img1"><img src="img/小新/05211015 蠟筆小新玻璃杯 90_2.jpg" class="img2"><strong>05211015 小新玻璃杯<br>批發價 $90</strong></p><button class="btn btn-danger my-cart-btn" data-id="05211015" data-name="05211015 小新玻璃杯"
+                    data-price="90" data-quantity="1" data-image="img/小新/05211015 蠟筆小新玻璃杯 90_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/小新/05210302  蠟筆小新橫式收納夾口罩夾12x22x0.1cm $22_1.jpg" class="img1"><img src="img/小新/05210302  蠟筆小新橫式收納夾口罩夾12x22x0.1cm $22_2.jpg" class="img2"><strong>05210302
-                        橫式收納夾口罩夾<br>批發價 $22</strong></p><button class="btn btn-danger my-cart-btn" data-id="99999999" data-name="05210302 橫式收納夾口罩夾" data-price="22" data-quantity="1" data-image="img/小新/05210302  蠟筆小新橫式收納夾口罩夾12x22x0.1cm $22_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
-            </div>
-            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/小新/05210503  蠟筆小新雙色原子筆 $25.jpg"><strong>05210503 雙色原子筆<br>批發價 $25</strong>
-                </p><button class="btn btn-danger my-cart-btn" data-id="05210503" data-name="05210503 雙色原子筆" data-price="25" data-quantity="1" data-image="img/小新/05210503  蠟筆小新雙色原子筆 $25.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        橫式收納夾口罩夾<br>批發價 $22</strong></p><button class="btn btn-danger my-cart-btn" data-id="05210302" data-name="05210302 橫式收納夾口罩夾" data-price="22" data-quantity="1" data-image="img/小新/05210302  蠟筆小新橫式收納夾口罩夾12x22x0.1cm $22_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
         </div>
         <div class="row">
@@ -407,111 +459,115 @@
         <div class="row">
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/26191001  角落生物繪畫組 $240_1.jpg" class="img1"><img src="img/角落生物/26191001  角落生物繪畫組 $240_1.jpg" class="img2"><strong>26191001 角落生物繪畫組<br>批發價
-                        $240</strong></p><button class="btn btn-danger my-cart-btn" data-id="26191001" data-name="26191001 角落生物繪畫組" data-price="240" data-quantity="1" data-image="img/角落生物/26191001  角落生物繪畫組 $240_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $240</strong></p><button class="btn btn-danger my-cart-btn" data-id="26191001" data-name="26191001 角落生物繪畫組" data-price="240" data-quantity="1" data-image="img/角落生物/26191001  角落生物繪畫組 $240_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/26201236  角落生物滾輪印章組 $155_1.jpg" class="img1"><img src="img/角落生物/26201236  角落生物滾輪印章組 $155_2.jpg" class="img2"><strong>26201236 滾輪印章組<br>批發價
-                        $155</strong></p><button class="btn btn-danger my-cart-btn" data-id="26201236" data-name="26201236 滾輪印章組" data-price="155" data-quantity="1" data-image="img/角落生物/26201236  角落生物滾輪印章組 $155_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $155</strong></p><button class="btn btn-danger my-cart-btn" data-id="26201236" data-name="26201236 滾輪印章組" data-price="155" data-quantity="1" data-image="img/角落生物/26201236  角落生物滾輪印章組 $155_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/00210210  角落生物絨布眼罩$42_1.jpg" class="img1"><img src="img/角落生物/00210210  角落生物絨布眼罩$42_2.jpg" class="img2"><strong>00210210 絨布眼罩<br>批發價
-                        $42</strong></p><button class="btn btn-danger my-cart-btn" data-id="00210210" data-name="00210210 絨布眼罩" data-price="42" data-quantity="1" data-image="img/角落生物/00210210  角落生物絨布眼罩$42_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $42</strong></p><button class="btn btn-danger my-cart-btn" data-id="00210210" data-name="00210210 絨布眼罩" data-price="42" data-quantity="1" data-image="img/角落生物/00210210  角落生物絨布眼罩$42_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/1_1.jpg" class="img1"><img src="img/角落生物/1_2.jpg" class="img2"><strong>04210117 球型彩色蠟筆<br>批發價 $22</strong></p><button class="btn btn-danger my-cart-btn" data-id="04210117" data-name="04210117 球型彩色蠟筆" data-price="22"
-                    data-quantity="1" data-image="img/角落生物/1_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                    data-quantity="1" data-image="img/角落生物/1_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/2_1.jpg" class="img1"><img src="img/角落生物/2_2.jpg" class="img2"><strong>04210415 彩色蠟筆C<br>批發價 $12</strong></p><button class="btn btn-danger my-cart-btn" data-id="04210415" data-name="04210415 彩色蠟筆C" data-price="12" data-quantity="1"
-                    data-image="img/角落生物/2_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                    data-image="img/角落生物/2_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/07210412 角落生物醫生組 $140_1.jpg" class="img1"><img src="img/角落生物/07210412 角落生物醫生組 $140_2.jpg" class="img2"><strong>07210412 角落生物醫生組<br>批發價
-                        $140</strong></p><button class="btn btn-danger my-cart-btn" data-id="07210412" data-name="07210412 角落生物醫生組" data-price="140" data-quantity="1" data-image="img/角落生物/07210412 角落生物醫生組 $140_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $140</strong></p><button class="btn btn-danger my-cart-btn" data-id="07210412" data-name="07210412 角落生物醫生組" data-price="140" data-quantity="1" data-image="img/角落生物/07210412 角落生物醫生組 $140_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/27201218  角落生物小蘇打150g$20_1.jpg" class="img1"><img src="img/角落生物/27201218  角落生物小蘇打150g$20_2.jpg" class="img2"><strong>27201218 角落生物小蘇打150g<br>批發價
-                        $20</strong></p><button class="btn btn-danger my-cart-btn" data-id="27201218" data-name="27201218 角落生物小蘇打150g" data-price="20" data-quantity="1" data-image="img/角落生物/27201218  角落生物小蘇打150g$20_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $20</strong></p><button class="btn btn-danger my-cart-btn" data-id="27201218" data-name="27201218 角落生物小蘇打150g" data-price="20" data-quantity="1" data-image="img/角落生物/27201218  角落生物小蘇打150g$20_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/00210402  角落生物陶瓷屋型盤 $120_1.jpg" class="img1"><strong>00210402
-                        陶瓷屋型盤<br>批發價 $120</strong></p><button class="btn btn-danger my-cart-btn" data-id="00210402" data-name="00210402 陶瓷屋型盤" data-price="120" data-quantity="1" data-image="img/角落生物/00210402  角落生物陶瓷屋型盤 $120_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        陶瓷屋型盤<br>批發價 $120</strong></p><button class="btn btn-danger my-cart-btn" data-id="00210402" data-name="00210402 陶瓷屋型盤" data-price="120" data-quantity="1" data-image="img/角落生物/00210402  角落生物陶瓷屋型盤 $120_1.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/角落生物/00210806  角落生物吸水杯墊 80_1.jpg" class="img1"><img src="img/角落生物/00210806  角落生物吸水杯墊 80_2.jpg" class="img2"><strong>00210806  角落生物吸水杯墊<br>批發價 $80</strong></p><button class="btn btn-danger my-cart-btn" data-id="00210806" data-name="00210806  角落生物吸水杯墊"
+                    data-price="80" data-quantity="1" data-image="img/角落生物/00210806  角落生物吸水杯墊 80_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/00210512  角落生物萬用梅森杯罐120ml $50_1.jpg" class="img1"><img src="img/角落生物/00210512  角落生物萬用梅森杯罐120ml $50_2.jpg" class="img2"><strong>00210512 萬用梅森杯罐<br>批發價
-                        $50</strong></p><button class="btn btn-danger my-cart-btn" data-id="00210512" data-name="00210512 萬用梅森杯罐" data-price="50" data-quantity="1" data-image="img/角落生物/00210512  角落生物萬用梅森杯罐120ml $50_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $50</strong></p><button class="btn btn-danger my-cart-btn" data-id="00210512" data-name="00210512 萬用梅森杯罐" data-price="50" data-quantity="1" data-image="img/角落生物/00210512  角落生物萬用梅森杯罐120ml $50_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/04210416  角落生物四方鏡D $40_1.jpg" class="img1"><img src="img/角落生物/04210416  角落生物四方鏡D $40_2.jpg" class="img2"><strong>04210416 四方鏡D<br>批發價
-                        $40</strong></p><button class="btn btn-danger my-cart-btn" data-id="04210416" data-name="04210416 四方鏡D" data-price="40" data-quantity="1" data-image="img/角落生物/04210416  角落生物四方鏡D $40_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $40</strong></p><button class="btn btn-danger my-cart-btn" data-id="04210416" data-name="04210416 四方鏡D" data-price="40" data-quantity="1" data-image="img/角落生物/04210416  角落生物四方鏡D $40_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/04210417  角落生物長方鏡D $50_1.jpg" class="img1"><img src="img/角落生物/04210417  角落生物長方鏡D $50_2.jpg" class="img2"><strong>04210417 長方鏡D<br>批發價
-                        $50</strong></p><button class="btn btn-danger my-cart-btn" data-id="04210417" data-name="04210417 長方鏡D" data-price="50" data-quantity="1" data-image="img/角落生物/04210417  角落生物長方鏡D $50_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $50</strong></p><button class="btn btn-danger my-cart-btn" data-id="04210417" data-name="04210417 長方鏡D" data-price="50" data-quantity="1" data-image="img/角落生物/04210417  角落生物長方鏡D $50_1.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/04210418  角落生物隨身鏡D $25_1.jpg" class="img1"><img src="img/角落生物/04210418  角落生物隨身鏡D $25_2.jpg" class="img2"><strong>04210418 隨身鏡D<br>批發價
-                        $25</strong></p><button class="btn btn-danger my-cart-btn" data-id="04210418" data-name="04210418 隨身鏡D" data-price="25" data-quantity="1" data-image="img/角落生物/04210418  角落生物隨身鏡D $25_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $25</strong></p><button class="btn btn-danger my-cart-btn" data-id="04210418" data-name="04210418 隨身鏡D" data-price="25" data-quantity="1" data-image="img/角落生物/04210418  角落生物隨身鏡D $25_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/07201101  角落生物電動釣魚盤$250_1.jpg" class="img1"><img src="img/角落生物/07201101  角落生物電動釣魚盤$250_2.jpg" class="img2"><strong>07201101 電動釣魚盤<br>批發價
-                        $250</strong></p><button class="btn btn-danger my-cart-btn" data-id="07201101" data-name="07201101 電動釣魚盤" data-price="250" data-quantity="1" data-image="img/角落生物/07201101  角落生物電動釣魚盤$250_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $250</strong></p><button class="btn btn-danger my-cart-btn" data-id="07201101" data-name="07201101 電動釣魚盤" data-price="250" data-quantity="1" data-image="img/角落生物/07201101  角落生物電動釣魚盤$250_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/07201102  角落生物玩具公仔$115_1.jpg" class="img1"><img src="img/角落生物/07201102  角落生物玩具公仔$115_2.jpg" class="img2"><strong>07201102 玩具公仔<br>批發價
-                        $115</strong></p><button class="btn btn-danger my-cart-btn" data-id="07201102" data-name="07201102 玩具公仔" data-price="115" data-quantity="1" data-image="img/角落生物/07201102  角落生物玩具公仔$115_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $115</strong></p><button class="btn btn-danger my-cart-btn" data-id="07201102" data-name="07201102 玩具公仔" data-price="115" data-quantity="1" data-image="img/角落生物/07201102  角落生物玩具公仔$115_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/21201102  角落生物互動走路玩偶$650_1.jpg" class="img1"><img src="img/角落生物/21201102  角落生物互動走路玩偶$650_2.jpg" class="img2"><strong>21201102 互動走路玩偶<br>批發價
-                        $650</strong></p><button class="btn btn-danger my-cart-btn" data-id="21201102" data-name="21201102 互動走路玩偶" data-price="650" data-quantity="1" data-image="img/角落生物/21201102  角落生物互動走路玩偶$650_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $650</strong></p><button class="btn btn-danger my-cart-btn" data-id="21201102" data-name="21201102 互動走路玩偶" data-price="650" data-quantity="1" data-image="img/角落生物/21201102  角落生物互動走路玩偶$650_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/21201106  角落生物角落收銀機$280_1.jpg" class="img1"><img src="img/角落生物/21201106  角落生物角落收銀機$280_2.jpg" class="img2"><strong>21201106 角落收銀機<br>批發價
-                        $280</strong></p><button class="btn btn-danger my-cart-btn" data-id="21201106" data-name="21201106 角落收銀機" data-price="280" data-quantity="1" data-image="img/角落生物/21201106  角落生物角落收銀機$280_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $280</strong></p><button class="btn btn-danger my-cart-btn" data-id="21201106" data-name="21201106 角落收銀機" data-price="280" data-quantity="1" data-image="img/角落生物/21201106  角落生物角落收銀機$280_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/21201108  角落生物擦手巾$165_1.jpg" class="img1"><img src="img/角落生物/21201108  角落生物擦手巾$165_2.jpg" class="img2"><strong>21201108 擦手巾<br>批發價
-                        $165</strong></p><button class="btn btn-danger my-cart-btn" data-id="21201108" data-name="21201108 擦手巾" data-price="165" data-quantity="1" data-image="img/角落生物/21201108  角落生物擦手巾$165_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $165</strong></p><button class="btn btn-danger my-cart-btn" data-id="21201108" data-name="21201108 擦手巾" data-price="165" data-quantity="1" data-image="img/角落生物/21201108  角落生物擦手巾$165_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/21201206  角落生物透明後背包$550_1.jpg" class="img1"><img src="img/角落生物/21201206  角落生物透明後背包$550_2.jpg" class="img2"><strong>21201206 透明後背包<br>批發價
-                        $550</strong></p><button class="btn btn-danger my-cart-btn" data-id="21201206" data-name="21201206 透明後背包" data-price="550" data-quantity="1" data-image="img/角落生物/21201206  角落生物透明後背包$550_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $550</strong></p><button class="btn btn-danger my-cart-btn" data-id="21201206" data-name="21201206 透明後背包" data-price="550" data-quantity="1" data-image="img/角落生物/21201206  角落生物透明後背包$550_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/21210303  角落生物毛巾隨身瓶$235_1.jpg" class="img1"><img src="img/角落生物/21210303  角落生物毛巾隨身瓶$235_2.jpg" class="img2"><strong>21210303 毛巾隨身瓶<br>批發價
-                        $235</strong></p><button class="btn btn-danger my-cart-btn" data-id="21210303" data-name="21210303 毛巾隨身瓶" data-price="235" data-quantity="1" data-image="img/角落生物/21210303  角落生物毛巾隨身瓶$235_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $235</strong></p><button class="btn btn-danger my-cart-btn" data-id="21210303" data-name="21210303 毛巾隨身瓶" data-price="235" data-quantity="1" data-image="img/角落生物/21210303  角落生物毛巾隨身瓶$235_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/21210308  角落生物可換殼電子錶$195_1.jpg" class="img1"><img src="img/角落生物/21210308  角落生物可換殼電子錶$195_2.jpg" class="img2"><strong>21210308 可換殼電子錶<br>批發價
-                        $195</strong></p><button class="btn btn-danger my-cart-btn" data-id="21210308" data-name="21210308 可換殼電子錶" data-price="195" data-quantity="1" data-image="img/角落生物/21210308  角落生物可換殼電子錶$195_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $195</strong></p><button class="btn btn-danger my-cart-btn" data-id="21210308" data-name="21210308 可換殼電子錶" data-price="195" data-quantity="1" data-image="img/角落生物/21210308  角落生物可換殼電子錶$195_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/26200511  角落生物折疊收納椅(耐荷重80KG) $375_1.jpg" class="img1"><img src="img/角落生物/26200511  角落生物折疊收納椅(耐荷重80KG) $375_2.jpg" class="img2"><strong>26200511
-                        折疊收納椅(耐荷重80KG) 批發價 $375</strong></p><button class="btn btn-danger my-cart-btn" data-id="26200511" data-name="26200511 折疊收納椅" data-price="375" data-quantity="1" data-image="img/角落生物/26200511  角落生物折疊收納椅(耐荷重80KG) $375_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        折疊收納椅(耐荷重80KG) 批發價 $375</strong></p><button class="btn btn-danger my-cart-btn" data-id="26200511" data-name="26200511 折疊收納椅" data-price="375" data-quantity="1" data-image="img/角落生物/26200511  角落生物折疊收納椅(耐荷重80KG) $375_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/26210304 角落生物彩繪組 $185_1.jpg" class="img1"><img src="img/角落生物/26210304 角落生物彩繪組 $185_2.jpg" class="img2"><strong>26210304 彩繪組<br>批發價
-                        $185</strong></p><button class="btn btn-danger my-cart-btn" data-id="26210304" data-name="26210304 彩繪組" data-price="185" data-quantity="1" data-image="img/角落生物/26210304 角落生物彩繪組 $185_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $185</strong></p><button class="btn btn-danger my-cart-btn" data-id="26210304" data-name="26210304 彩繪組" data-price="185" data-quantity="1" data-image="img/角落生物/26210304 角落生物彩繪組 $185_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/44210301 角落生物背包水槍 $290_1.jpg" class="img1"><img src="img/角落生物/44210301 角落生物背包水槍 $290_2.jpg" class="img2"><strong>44210301 背包水槍<br>批發價
-                        $290</strong></p><button class="btn btn-danger my-cart-btn" data-id="44210301" data-name="44210301 背包水槍" data-price="290" data-quantity="1" data-image="img/角落生物/44210301 角落生物背包水槍 $290_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $290</strong></p><button class="btn btn-danger my-cart-btn" data-id="44210301" data-name="44210301 背包水槍" data-price="290" data-quantity="1" data-image="img/角落生物/44210301 角落生物背包水槍 $290_1.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/44210302 角落生物手臂漂浮泳圈 $225_1.jpg" class="img1"><img src="img/角落生物/44210302 角落生物手臂漂浮泳圈 $225_2.jpg" class="img2"><strong>44210302 手臂漂浮泳圈<br>批發價
-                        $225</strong></p><button class="btn btn-danger my-cart-btn" data-id="44210302" data-name="44210302 手臂漂浮泳圈" data-price="225" data-quantity="1" data-image="img/角落生物/44210302 角落生物手臂漂浮泳圈 $225_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $225</strong></p><button class="btn btn-danger my-cart-btn" data-id="44210302" data-name="44210302 手臂漂浮泳圈" data-price="225" data-quantity="1" data-image="img/角落生物/44210302 角落生物手臂漂浮泳圈 $225_1.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/44210303 角落生物沙灘球 $170_1.jpg" class="img1"><img src="img/角落生物/44210303 角落生物沙灘球 $170_2.jpg" class="img2"><strong>44210303 沙灘球<br>批發價
-                        $170</strong></p><button class="btn btn-danger my-cart-btn" data-id="44210303" data-name="44210303 沙灘球" data-price="170" data-quantity="1" data-image="img/角落生物/44210303 角落生物沙灘球 $170_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $170</strong></p><button class="btn btn-danger my-cart-btn" data-id="44210303" data-name="44210303 沙灘球" data-price="170" data-quantity="1" data-image="img/角落生物/44210303 角落生物沙灘球 $170_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
 
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/角落生物/44210305 角落生物泳圈60cm $380_1.jpg" class="img1"><img src="img/角落生物/44210305 角落生物泳圈60cm $380_2.jpg" class="img2"><strong>44210305 泳圈60cm<br>批發價
-                        $380</strong></p><button class="btn btn-danger my-cart-btn" data-id="44210305" data-name="44210305 泳圈60cm" data-price="380" data-quantity="1" data-image="img/角落生物/44210305 角落生物泳圈60cm $380_1.jpg">購入<img class="plus" src="img/+1.png"></button></button>
+                        $380</strong></p><button class="btn btn-danger my-cart-btn" data-id="44210305" data-name="44210305 泳圈60cm" data-price="380" data-quantity="1" data-image="img/角落生物/44210305 角落生物泳圈60cm $380_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
 
             <!--              
@@ -868,10 +924,15 @@
 
             </div>
 
+            <!-- KAKAO FRIENDS -->
+
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/star/01201117  KAKAO FRIENDS超級無敵貼 $45_1.jpg" class="img1"><img src="img/star/01201117  KAKAO FRIENDS超級無敵貼 $45_2.jpg" class="img2"><strong>01201117 KAKAO FRIENDS超級無敵貼 批發價 $45</strong></p><button class="btn btn-danger my-cart-btn"
                     data-id="01201117" data-name="01201117 KAKAO FRIENDS超級無敵貼" data-price="45" data-quantity="1" data-image="img/star/01201117  KAKAO FRIENDS超級無敵貼 $45_1.jpg">購入<img class="plus" src="img/+1.png"></button>
-
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/star/05201103  Kakao Friends積木抽屜盒 $170_1.jpg" class="img1"><img src="img/star/05201103  Kakao Friends積木抽屜盒 $170_2.jpg" class="img2"><strong>05201103 Kakao Friends積木抽屜盒 批發價 $170</strong></p><button class="btn btn-danger my-cart-btn"
+                    data-id="05201103" data-name="05201103 Kakao Friends積木抽屜盒" data-price="170" data-quantity="1" data-image="img/star/05201103  Kakao Friends積木抽屜盒 $170_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/star/00210307  巧虎沐浴棉 $35_1.jpg" class="img1"><img src="img/star/00210307  巧虎沐浴棉 $35_2.jpg" class="img2"><strong>00210307 巧虎沐浴棉<br>批發價
@@ -904,13 +965,13 @@
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/star/44200749  星之卡比徽章手作組 $1200_1.jpg" class="img1"><img src="img/star/44200749  星之卡比徽章手作組 $1200_2.jpg" class="img2"><strong>44200749 星之卡比徽章手作組<br>批發價 $1200</strong></p><button class="btn btn-danger my-cart-btn" data-id="44200749"
                     data-name="44200749 星之卡比徽章手作組" data-price="1200" data-quantity="1" data-image="img/star/44200749  星之卡比徽章手作組 $1200_1.jpg">購入<img class="plus" src="img/+1.png"></button>
-
             </div>
-
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/star/05201103  Kakao Friends積木抽屜盒 $170_1.jpg" class="img1"><img src="img/star/05201103  Kakao Friends積木抽屜盒 $170_2.jpg" class="img2"><strong>05201103 Kakao Friends積木抽屜盒 批發價 $170</strong></p><button class="btn btn-danger my-cart-btn"
-                    data-id="05201103" data-name="05201103 Kakao Friends積木抽屜盒" data-price="170" data-quantity="1" data-image="img/star/05201103  Kakao Friends積木抽屜盒 $170_1.jpg">購入<img class="plus" src="img/+1.png"></button>
+                <p class="img"><img src="img/star/79150802 KT輕巧杯200cc 30_1.jpg" class="img1"><img src="img/star/79150802 KT輕巧杯200cc 30_2.jpg" class="img2"><strong>79150802 KT輕巧杯200cc<br>批發價 $30</strong></p><button class="btn btn-danger my-cart-btn" data-id="79150802"
+                    data-name="79150802 KT輕巧杯200cc" data-price="30" data-quantity="1" data-image="img/star/79150802 KT輕巧杯200cc 30_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
+
+
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/star/18210402  史努比小星球手提保溫袋 $120_1.jpg" class="img1"><img src="img/star/18210402  史努比小星球手提保溫袋 $120_2.jpg" class="img2"><strong>18210402 史努比小星球手提保溫袋 批發價
                         $120</strong></p><button class="btn btn-danger my-cart-btn" data-id="18210402" data-name="18210402 史努比小星球手提保溫袋" data-price="120" data-quantity="1" data-image="img/star/18210402  史努比小星球手提保溫袋 $120_1.jpg">購入<img class="plus" src="img/+1.png"></button>
@@ -1056,7 +1117,6 @@
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/star/00200613  粉紅豬小妹可愛不鏽鋼湯匙 $42.jpg"><strong>00200613 粉紅豬小妹可愛不鏽鋼湯匙 批發價
                         $42</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
             </div>
         </div> -->
     </div>
@@ -1846,14 +1906,33 @@
     <div class="container goods14">
         <div class="row">
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/熊本熊/32210305 熊本熊不鏽鋼隔熱便當盒680ml S-9900-1XK 100_1.jpg" class="img1"><img src="img/熊本熊/32210305 熊本熊不鏽鋼隔熱便當盒680ml S-9900-1XK 100_2.jpg" class="img2"><strong>32210305 熊本熊不鏽鋼隔熱便當盒 批發價 $100_1</strong></p><button class="btn btn-danger my-cart-btn"
+                    data-id="32210305" data-name="32210305 熊本熊不鏽鋼隔熱便當盒" data-price="100" data-quantity="1" data-image="img/熊本熊/32210305 熊本熊不鏽鋼隔熱便當盒680ml S-9900-1XK 100_1.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/熊本熊/32201008 熊本熊隔熱手拿杯380ml S-9000-1K 50_1.jpg" class="img1"><img src="img/熊本熊/32201008 熊本熊隔熱手拿杯380ml S-9000-1K 50_2.jpg" class="img2"><strong>32201008 熊本熊隔熱手拿杯380ml 批發價 $50</strong></p><button class="btn btn-danger my-cart-btn"
+                    data-id="32201008" data-name="32201008 熊本熊隔熱手拿杯380ml" data-price="50" data-quantity="1" data-image="img/熊本熊/32201008 熊本熊隔熱手拿杯380ml S-9000-1K 50_1.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/熊本熊/32210303 熊本熊寶特瓶水壺600ml 90_1.jpg" class="img1"><img src="img/熊本熊/32210303 熊本熊寶特瓶水壺600ml 90_2.jpg" class="img2"><strong>32210303 熊本熊寶特瓶水壺600ml 批發價 $90</strong></p><button class="btn btn-danger my-cart-btn" data-id="32210303"
+                    data-name="32210303 熊本熊寶特瓶水壺600ml" data-price="90" data-quantity="1" data-image="img/熊本熊/32210303 熊本熊寶特瓶水壺600ml 90_1.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/熊本熊/32170211  熊本熊 直飲水壺700cc $140_1.jpg" class="img1"><img src="img/熊本熊/32170211  熊本熊 直飲水壺700cc $140_2.jpg" class="img2"><strong>32170211
                         直飲水壺700cc<br>批發價 $140</strong></p><button class="btn btn-danger my-cart-btn" data-id="32170211" data-name="32170211 直飲水壺700cc" data-price="140" data-quantity="1" data-image="img/熊本熊/32170211  熊本熊 直飲水壺700cc $140_1.jpg">購入<img class="plus" src="img/+1.png"></button>
-
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/熊本熊/32210304 熊本熊造型隨身杯400ml R-1100-1K 100_1.jpg" class="img1"><img src="img/熊本熊/32210304 熊本熊造型隨身杯400ml R-1100-1K 100_2.jpg" class="img2"><strong>32210304 熊本熊造型隨身杯400ml 批發價 $100</strong></p><button class="btn btn-danger my-cart-btn"
+                    data-id="32210304" data-name="32210304 熊本熊造型隨身杯400ml" data-price="100" data-quantity="1" data-image="img/熊本熊/32210304 熊本熊造型隨身杯400ml R-1100-1K 100_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/熊本熊/32170214  熊本熊 摺疊鏡(長形) $70_1.jpg" class="img1"><img src="img/熊本熊/32170214  熊本熊 摺疊鏡(長形) $70_2.jpg" class="img2"><strong>32170214 摺疊鏡(長形)<br>批發價
                         $70</strong></p><button class="btn btn-danger my-cart-btn" data-id="32170214" data-name="32170214 摺疊鏡(長形)" data-price="70" data-quantity="1" data-image="img/熊本熊/32170214  熊本熊 摺疊鏡(長形) $70_1.jpg">購入<img class="plus" src="img/+1.png"></button>
 
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/熊本熊/32201001 熊本熊方型小物收納盒 50_1.jpg" class="img1"><img src="img/熊本熊/32201001 熊本熊方型小物收納盒 50_2.jpg" class="img2"><strong>32201001 方型小物收納盒<br>批發價 $50</strong></p><button class="btn btn-danger my-cart-btn" data-id="32201001" data-name="32201001 方型小物收納盒"
+                    data-price="50" data-quantity="1" data-image="img/熊本熊/32201001 熊本熊方型小物收納盒 50_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/熊本熊/32170219  熊本熊 直式抽屜箱 $140_1.jpg" class="img1"><img src="img/熊本熊/32170219  熊本熊 直式抽屜箱 $140_2.jpg" class="img2"><strong>32170219 直式抽屜箱<br>批發價
@@ -1988,20 +2067,19 @@
                 <p class="img"><img src="img/3C/24210612 Infotec超大款布面滑鼠墊70x30cm $225.jpg"><strong>24210612 Infotec超大款布面滑鼠墊70x30cm 批發價 $225</strong><span></span></p><button class="btn btn-danger my-cart-btn" data-id="24210612" data-name="24210612 Infotec超大款布面滑鼠墊70x30cm"
                     data-price="225" data-quantity="1" data-image="img/3C/24210612 Infotec超大款布面滑鼠墊70x30cm $225.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
-            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/3C/49200901 精選手錶 $100.jpg"><strong>49200901 精選手錶<br>批發價
-                        $100</strong><span></span></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-            </div>
-            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/3C/98200612  智能感應垃圾桶10L $380.jpg"><strong>98200612 智能感應垃圾桶10L<br>批發價
-                        $380</strong><span></span></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-            </div>
-            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/3C/98201001  智能感應酒精噴霧器140ml$250.jpg"><strong>98201001 智能感應酒精噴霧器140ml
-                        批發價 $250</strong><span></span></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-            </div>
 
+            <!-- <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/3C/49200901 精選手錶 $100.jpg"><strong>49200901 精選手錶<br>批發價 $100</strong><span></span></p><button class="btn btn-danger my-cart-btn" data-id="49200901" data-name="49200901 精選手錶" data-price="100" data-quantity="1" data-image="img/3C/49200901 精選手錶 $100.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div> -->
 
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/3C/98200612  智能感應垃圾桶10L $380.jpg"><strong>98200612 智能感應垃圾桶10L<br>批發價 $380</strong><span></span></p><button class="btn btn-danger my-cart-btn" data-id="98200612" data-name="98200612 智能感應垃圾桶10L" data-price="380" data-quantity="1"
+                    data-image="img/3C/98200612  智能感應垃圾桶10L $380.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/3C/98201001  智能感應酒精噴霧器140ml$250.jpg"><strong>98201001 智能感應酒精噴霧器140ml 批發價 $250</strong><span></span></p><button class="btn btn-danger my-cart-btn" data-id="98201001" data-name="98201001 智能感應酒精噴霧器140ml" data-price="250" data-quantity="1"
+                    data-image="img/3C/98201001  智能感應酒精噴霧器140ml$250.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
         </div>
     </div>
 
@@ -2011,52 +2089,50 @@
         <div class="row">
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/19161015  可利亞光觸媒除濕機$2000.jpg"><strong>19161015 可利亞光觸媒除濕機<br>批發價
-                        $2000</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $2000</strong></p><button class="btn btn-danger my-cart-btn" data-id="19161015" data-name="19161015 可利亞光觸媒除濕機" data-price="2000" data-quantity="1" data-image="img/EA/19161015  可利亞光觸媒除濕機$2000.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/19171001  可利亞鑽石花美食鍋$990.jpg"><strong>19171001 可利亞鑽石花美食鍋<br>批發價
-                        $990</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $990</strong></p><button class="btn btn-danger my-cart-btn" data-id="19171001" data-name="19171001 可利亞鑽石花美食鍋" data-price="990" data-quantity="1" data-image="img/EA/19171001  可利亞鑽石花美食鍋$990.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/19171004  可利亞美食蒸煮鍋$495.jpg"><strong>19171004 可利亞美食蒸煮鍋<br>批發價
-                        $495</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $495</strong></p><button class="btn btn-danger my-cart-btn" data-id="19171004" data-name="19171004 可利亞美食蒸煮鍋" data-price="495" data-quantity="1" data-image="img/EA/19171004  可利亞美食蒸煮鍋$495.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/19190304  松井三層防燙保溫快煮壺 $820.jpg"><strong>19190304 松井三層防燙保溫快煮壺 批發價
-                        $820</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                        $820</strong></p><button class="btn btn-danger my-cart-btn" data-id="19190304" data-name="19190304 松井三層防燙保溫快煮壺" data-price="820" data-quantity="1" data-image="img/EA/19190304  松井三層防燙保溫快煮壺 $820.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
-
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/EA/19190802  松井電子式冷暖兩用電子冰箱(6公升) $1875.jpg"><strong>19190802
-                        松井電子式冷暖兩用電子冰箱(6公升) 批發價 $1875</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                <p class="img"><img src="img/EA/19190802  松井電子式冷暖兩用電子冰箱(6公升) $1875.jpg"><strong>19190802 松井電子式冷暖兩用電子冰箱(6公升) 批發價 $1875</strong></p><button class="btn btn-danger my-cart-btn" data-id="19190802" data-name="19190802 松井電子式冷暖兩用電子冰箱" data-price="1875" data-quantity="1"
+                    data-image="img/EA/19190802  松井電子式冷暖兩用電子冰箱(6公升) $1875.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/EA/19200201  可利亞晶透玻璃泡茶快煮壺1.8L $820.jpg"><strong>19200201
-                        可利亞晶透玻璃泡茶快煮壺1.8L 批發價 $820</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                <p class="img"><img src="img/EA/19200201  可利亞晶透玻璃泡茶快煮壺1.8L $820.jpg"><strong>19200201 可利亞晶透玻璃泡茶快煮壺1.8L 批發價 $820</strong></p><button class="btn btn-danger my-cart-btn" data-id="19200201" data-name="19200201 可利亞晶透玻璃泡茶快煮壺1.8L" data-price="820" data-quantity="1"
+                    data-image="img/EA/19200201  可利亞晶透玻璃泡茶快煮壺1.8L $820.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/19201102  松井暖被防蹣多功能烘被機 $1800.jpg"><strong>19201102 松井暖被防蹣多功能烘被機 批發價
-                        $1800</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $1800</strong></p><button class="btn btn-danger my-cart-btn" data-id="19201102" data-name="19201102 松井暖被防蹣多功能烘被機" data-price="1800" data-quantity="1" data-image="img/EA/19201102  松井暖被防蹣多功能烘被機 $1800.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/19201103  松井萬用烹煮巧食樂享鍋3L $800.jpg"><strong>19201103 松井萬用烹煮巧食樂享鍋3L 批發價
-                        $800</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $800</strong></p><button class="btn btn-danger my-cart-btn" data-id="19201103" data-name="19201103 松井萬用烹煮巧食樂享鍋3L" data-price="800" data-quantity="1" data-image="img/EA/19201103  松井萬用烹煮巧食樂享鍋3L $800.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/EA/19201104  松井烹煮煎烤兩用美肴樂饕鍋3L $1350.jpg"><strong>19201104
-                        松井烹煮煎烤兩用美肴樂饕鍋3L 批發價 $1350</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                <p class="img"><img src="img/EA/19201104  松井烹煮煎烤兩用美肴樂饕鍋3L $1350.jpg"><strong>19201104 松井烹煮煎烤兩用美肴樂饕鍋3L 批發價 $1350</strong></p><button class="btn btn-danger my-cart-btn" data-id="19201104" data-name="19201104 松井烹煮煎烤兩用美肴樂饕鍋3L" data-price="1350" data-quantity="1"
+                    data-image="img/EA/19201104  松井烹煮煎烤兩用美肴樂饕鍋3L $1350.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/19201105  松井蒸煮兩用方舟電火鍋4L $1350.jpg"><strong>19201105 松井蒸煮兩用方舟電火鍋4L
-                        批發價 $1350</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        批發價 $1350</strong></p><button class="btn btn-danger my-cart-btn" data-id="19201105" data-name="19201105 松井蒸煮兩用方舟電火鍋4L" data-price="1350" data-quantity="1" data-image="img/EA/19201105  松井蒸煮兩用方舟電火鍋4L $1350.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
 
@@ -2084,63 +2160,62 @@
 
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/63200302  KINYO充電式照明電蚊拍 $180.jpg"><strong>63200302 KINYO充電式照明電蚊拍 批發價
-                        $180</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $180</strong></p><button class="btn btn-danger my-cart-btn" data-id="63200302" data-name="63200302 KINYO充電式照明電蚊拍" data-price="180" data-quantity="1" data-image="img/EA/63200302  KINYO充電式照明電蚊拍 $180.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/63200501  KINYO充電式二合一滅蚊器 $225.jpg"><strong>63200501 KINYO充電式二合一滅蚊器
-                        批發價 $225</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        批發價 $225</strong></p><button class="btn btn-danger my-cart-btn" data-id="63200501" data-name="63200501 KINYO充電式二合一滅蚊器" data-price="225" data-quantity="1" data-image="img/EA/63200501  KINYO充電式二合一滅蚊器 $225.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/63200519  KINYO四杯滴漏式咖啡機 $570.jpg"><strong>63200519 KINYO四杯滴漏式咖啡機 批發價
-                        $570</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $570</strong></p><button class="btn btn-danger my-cart-btn" data-id="63200519" data-name="63200519 KINYO四杯滴漏式咖啡機" data-price="570" data-quantity="1" data-image="img/EA/63200519  KINYO四杯滴漏式咖啡機 $570.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/63200902  KINYO手持小巧蒸氣掛燙機 $620.jpg"><strong>63200902 KINYO手持小巧蒸氣掛燙機
-                        批發價 $620</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        批發價 $620</strong></p><button class="btn btn-danger my-cart-btn" data-id="63200902" data-name="63200902 KINYO手持小巧蒸氣掛燙機" data-price="620" data-quantity="1" data-image="img/EA/63200902  KINYO手持小巧蒸氣掛燙機 $620.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/63201002  KINYO 三明治機$750.jpg"><strong>63201002 KINYO 三明治機<br>批發價
-                        $750</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $750</strong></p><button class="btn btn-danger my-cart-btn" data-id="63201002" data-name="63201002 KINYO 三明治機" data-price="750" data-quantity="1" data-image="img/EA/63201002  KINYO 三明治機$750.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/63201208  KINYO多功能電火鍋4L $720.jpg"><strong>63201208 KINYO多功能電火鍋4L 批發價
-                        $720</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $720</strong></p><button class="btn btn-danger my-cart-btn" data-id="63201208" data-name="63201208 KINYO多功能電火鍋4L" data-price="720" data-quantity="1" data-image="img/EA/63201208  KINYO多功能電火鍋4L $720.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/63201211  KINYO迷你美型除濕機 $1430.jpg"><strong>63201211 KINYO迷你美型除濕機 批發價
-                        $1430</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $1430</strong></p><button class="btn btn-danger my-cart-btn" data-id="63201211" data-name="63201211 KINYO迷你美型除濕機" data-price="1430" data-quantity="1" data-image="img/EA/63201211  KINYO迷你美型除濕機 $1430.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/63201212  KINYO殺菌除蹣機 $1120.jpg"><strong>63201212 KINYO殺菌除蹣機<br>批發價
-                        $1120</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $1120</strong></p><button class="btn btn-danger my-cart-btn" data-id="63201212" data-name="63201212 KINYO殺菌除蹣機" data-price="1120" data-quantity="1" data-image="img/EA/63201212  KINYO殺菌除蹣機 $1120.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/63201213  KINYO紫外線殺菌燈 $1120.jpg"><strong>63201213 KINYO紫外線殺菌燈 批發價
-                        $1120</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $1120</strong></p><button class="btn btn-danger my-cart-btn" data-id="63201213" data-name="63201213 KINYO紫外線殺菌燈" data-price="1120" data-quantity="1" data-image="img/EA/63201213  KINYO紫外線殺菌燈 $1120.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/EA/63210101  KINYO 12滾輪加熱足浴機 $950.jpg"><strong>63210101 KINYO 12滾輪加熱足浴機
-                        批發價 $950</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        批發價 $950</strong></p><button class="btn btn-danger my-cart-btn" data-id="63210101" data-name="63210101 KINYO 12滾輪加熱足浴機" data-price="950" data-quantity="1" data-image="img/EA/63210101  KINYO 12滾輪加熱足浴機 $950.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/EA/63210102  KINYO智能恆溫電動按摩足浴機 $1400.jpg"><strong>63210102
-                        KINYO智能恆溫電動按摩足浴機 批發價 $1400</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                <p class="img"><img src="img/EA/63210102  KINYO智能恆溫電動按摩足浴機 $1400.jpg"><strong>63210102 KINYO智能恆溫電動按摩足浴機 批發價 $1400</strong></p><button class="btn btn-danger my-cart-btn" data-id="63210102" data-name="63210102 KINYO智能恆溫電動按摩足浴機" data-price="1400" data-quantity="1"
+                    data-image="img/EA/63210102  KINYO智能恆溫電動按摩足浴機 $1400.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/EA/63210307  KINYO充電式LED強光探照燈 $285.jpg"><strong>63210307
-                        KINYO充電式LED強光探照燈 批發價 $285</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                <p class="img"><img src="img/EA/63210307  KINYO充電式LED強光探照燈 $285.jpg"><strong>63210307 KINYO充電式LED強光探照燈 批發價 $285</strong></p><button class="btn btn-danger my-cart-btn" data-id="63210307" data-name="63210307 KINYO充電式LED強光探照燈" data-price="285" data-quantity="1"
+                    data-image="img/EA/63210307  KINYO充電式LED強光探照燈 $285.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
 
             <!-- <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
@@ -2156,102 +2231,92 @@
         <div class="row">
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/19200702  松井深層按摩筋膜槍 $1900.jpg"><strong>19200702 松井深層按摩筋膜槍<br>批發價
-                        $1900</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $1900</strong></p><button class="btn btn-danger my-cart-btn" data-id="19200702" data-name="19200702 松井深層按摩筋膜槍" data-price="1900" data-quantity="1" data-image="img/beauty/19200702  松井深層按摩筋膜槍 $1900.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/19201101  松井自動變速掌心型按摩筋膜槍 $1180.jpg"><strong>19201101
-                        松井自動變速掌心型按摩筋膜槍 批發價 $1180</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        松井自動變速掌心型按摩筋膜槍 批發價 $1180</strong></p><button class="btn btn-danger my-cart-btn" data-id="19201101" data-name="19201101  松井自動變速掌心型按摩筋膜槍" data-price="1180" data-quantity="1" data-image="img/beauty/19201101  松井自動變速掌心型按摩筋膜槍 $1180.jpg">購入<img class="plus" src="img/+1.png"></button>
+            </div>
+            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <p class="img"><img src="img/beauty/19210801 松井自動變速掌心型按摩筋膜槍 $1180.jpg"><strong>19210801 松井自動變速掌心型按摩筋膜槍 批發價 $1180</strong></p><button class="btn btn-danger my-cart-btn" data-id="19210801" data-name="19210801 松井自動變速掌心型按摩筋膜槍" data-price="1180" data-quantity="1"
+                    data-image="img/beauty/19210801 松井自動變速掌心型按摩筋膜槍 $1180.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/beauty/19210801 松井自動變速掌心型按摩筋膜槍 $1180.jpg"><strong>19210801
-                        松井自動變速掌心型按摩筋膜槍 批發價 $1180</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
-            </div>
-            <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/beauty/23200802  聲寶電動去硬皮美足機 $350.jpg"><strong>23200802
-                        聲寶電動去硬皮美足機<br>批發價 $350</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                <p class="img"><img src="img/beauty/23200802  聲寶電動去硬皮美足機 $350.jpg"><strong>23200802 聲寶電動去硬皮美足機<br>批發價 $350</strong></p><button class="btn btn-danger my-cart-btn" data-id="23200802" data-name="23200802 聲寶電動去硬皮美足機" data-price="350" data-quantity="1" data-image="img/beauty/23200802  聲寶電動去硬皮美足機 $350.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/23200804  聲寶兒童亮光音波震動牙刷 $450.jpg"><strong>23200804 聲寶兒童亮光音波震動牙刷
-                        批發價 $450</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                        批發價 $450</strong></p><button class="btn btn-danger my-cart-btn" data-id="23200804" data-name="23200804 聲寶兒童亮光音波震動牙刷" data-price="450" data-quantity="1" data-image="img/beauty/23200804  聲寶兒童亮光音波震動牙刷 $450.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/23200806  聲寶溫控加長型捲髮器 $1360.jpg"><strong>23200806
-                        聲寶溫控加長型捲髮器<br>批發價 $1360</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        聲寶溫控加長型捲髮器<br>批發價 $1360</strong></p><button class="btn btn-danger my-cart-btn" data-id="23200806" data-name="23200806  聲寶溫控加長型捲髮器" data-price="1360" data-quantity="1" data-image="img/beauty/23200806  聲寶溫控加長型捲髮器 $1360.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/23201002  聲寶二合一深層震動美顏機 $400.jpg"><strong>23201002 聲寶二合一深層震動美顏機
-                        批發價 $400</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                        批發價 $400</strong></p><button class="btn btn-danger my-cart-btn" data-id="23201002" data-name="23201002 聲寶二合一深層震動美顏機" data-price="400" data-quantity="1" data-image="img/beauty/23201002  聲寶二合一深層震動美顏機 $400.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/23201003  聲寶時尚型音波牙刷 $360.jpg"><strong>23201003 聲寶時尚型音波牙刷<br>批發價
-                        $360</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                        $360</strong></p><button class="btn btn-danger my-cart-btn" data-id="23201003" data-name="23201003 聲寶時尚型音波牙刷" data-price="360" data-quantity="1" data-image="img/beauty/23201003  聲寶時尚型音波牙刷 $360.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/23201004  聲寶五段式音波震動牙刷 $1050.jpg"><strong>23201004 聲寶五段式音波震動牙刷
-                        批發價 $1050</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                        批發價 $1050</strong></p><button class="btn btn-danger my-cart-btn" data-id="23201004" data-name="23201004 聲寶五段式音波震動牙刷" data-price="1050" data-quantity="1" data-image="img/beauty/23201004  聲寶五段式音波震動牙刷 $1050.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/beauty/23210302  聲寶攜帶型電動沖牙機 $1050.jpg"><strong>23210302
-                        聲寶攜帶型電動沖牙機<br>批發價 $1050</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                <p class="img"><img src="img/beauty/23210302  聲寶攜帶型電動沖牙機 $1050.jpg"><strong>23210302 聲寶攜帶型電動沖牙機<br>批發價 $1050</strong></p><button class="btn btn-danger my-cart-btn" data-id="23210302" data-name="23210302 聲寶攜帶型電動沖牙機" data-price="1050" data-quantity="1"
+                    data-image="img/beauty/23210302  聲寶攜帶型電動沖牙機 $1050.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/23210303  聲寶負離子燙髮梳 $920.jpg"><strong>23210303 聲寶負離子燙髮梳<br>批發價
-                        $920</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $920</strong></p><button class="btn btn-danger my-cart-btn" data-id="23210303" data-name="23210303 聲寶負離子燙髮梳" data-price="920" data-quantity="1" data-image="img/beauty/23210303  聲寶負離子燙髮梳 $920.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/23210304  聲寶無線溫控捲髮器 $1100.jpg"><strong>23210304 聲寶無線溫控捲髮器<br>批發價
-                        $1100</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $1100</strong></p><button class="btn btn-danger my-cart-btn" data-id="23210304" data-name="23210304 聲寶無線溫控捲髮器" data-price="1100" data-quantity="1" data-image="img/beauty/23210304  聲寶無線溫控捲髮器 $1100.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/23210305  聲寶電動理髮刀 $785.jpg"><strong>23210305 聲寶電動理髮刀<br>批發價
-                        $785</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $785</strong></p><button class="btn btn-danger my-cart-btn" data-id="23210305" data-name="23210305  聲寶電動理髮刀" data-price="785" data-quantity="1" data-image="img/beauty/23210305  聲寶電動理髮刀 $785.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/23210306  聲寶水洗式多功能修容刀 $1050.jpg"><strong>23210306 聲寶水洗式多功能修容刀
-                        批發價 $1050</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                        批發價 $1050</strong></p><button class="btn btn-danger my-cart-btn" data-id="23210306" data-name="23210306 聲寶水洗式多功能修容刀" data-price="1050" data-quantity="1" data-image="img/beauty/23210306  聲寶水洗式多功能修容刀 $1050.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/23210307  聲寶深層震動冷熱美顏儀 $1100.jpg"><strong>23210307 聲寶深層震動冷熱美顏儀
-                        批發價 $1100</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                        批發價 $1100</strong></p><button class="btn btn-danger my-cart-btn" data-id="23210307" data-name="23210307 聲寶深層震動冷熱美顏儀" data-price="1100" data-quantity="1" data-image="img/beauty/23210307  聲寶深層震動冷熱美顏儀 $1100.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/23210309  聲寶藍光熱力除毛儀 $1100.jpg"><strong>23210309 聲寶藍光熱力除毛儀<br>批發價
-                        $1100</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $1100</strong></p><button class="btn btn-danger my-cart-btn" data-id="23210309" data-name="23210309 聲寶藍光熱力除毛儀" data-price="1100" data-quantity="1" data-image="img/beauty/23210309  聲寶藍光熱力除毛儀 $1100.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/23210310  聲寶充電式除毛球機 $360.jpg"><strong>23210310 聲寶充電式除毛球機<br>批發價
-                        $360</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $360</strong></p><button class="btn btn-danger my-cart-btn" data-id="23210310" data-name="23210310 聲寶充電式除毛球機" data-price="360" data-quantity="1" data-image="img/beauty/23210310  聲寶充電式除毛球機 $360.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/28190808  KISS ME防曬水乳液50g(清透水感型升級版) $240.jpg"><strong>28190808
-                        KISS ME防曬水乳液50g 批發價 $240</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                        KISS ME防曬水乳液50g 批發價 $240</strong></p><button class="btn btn-danger my-cart-btn" data-id="28190808" data-name="28190808  KISS ME防曬水乳液50g" data-price="240" data-quantity="1" data-image="img/beauty/28190808  KISS ME防曬水乳液50g(清透水感型升級版) $240.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/63210105  KINYO液晶深層舒緩筋膜槍 $930.jpg"><strong>63210105
-                        KINYO液晶深層舒緩筋膜槍 批發價 $930</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                        KINYO液晶深層舒緩筋膜槍 批發價 $930</strong></p><button class="btn btn-danger my-cart-btn" data-id="63210105" data-name="63210105  KINYO液晶深層舒緩筋膜槍" data-price="930" data-quantity="1" data-image="img/beauty/63210105  KINYO液晶深層舒緩筋膜槍 $930.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/beauty/28210413  APEFRA香水護手霜25g $100.jpg"><strong>28210413
-                        APEFRA香水護手霜25g 批發價 $100</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        APEFRA香水護手霜25g 批發價 $100</strong></p><button class="btn btn-danger my-cart-btn" data-id="28210413" data-name="28210413  APEFRA香水護手霜25g" data-price="100" data-quantity="1" data-image="img/beauty/28210413  APEFRA香水護手霜25g $100.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
         </div>
@@ -2262,114 +2327,108 @@
         <div class="row">
 
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/food/34200803  韓式小雞麵30g(雞汁味)(24)$9_1.jpg" class="img1"><img src="img/food/34200803  韓式小雞麵30g(雞汁味)(24)$9_2.jpg" class="img2"><strong>34200803
-                        韓式小雞麵30g(雞汁味) 批發價 $9</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                <p class="img"><img src="img/food/34200803  韓式小雞麵30g(雞汁味)(24)$9_1.jpg" class="img1"><img src="img/food/34200803  韓式小雞麵30g(雞汁味)(24)$9_2.jpg" class="img2"><strong>34200803 韓式小雞麵30g(雞汁味) 批發價 $9</strong></p><button class="btn btn-danger my-cart-btn" data-id="34200803"
+                    data-name="34200803 韓式小雞麵30g(雞汁味)" data-price="9" data-quantity="1" data-image="img/food/34200803  韓式小雞麵30g(雞汁味)(24)$9_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
-                <p class="img"><img src="img/food/34200804  韓式小雞麵28g(香辣味)(24)$9_1.jpg" class="img1"><img src="img/food/34200804  韓式小雞麵28g(香辣味)(24)$9_2.jpg" class="img2"><strong>34200804
-                        韓式小雞麵28g(香辣味) 批發價 $9</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                <p class="img"><img src="img/food/34200804  韓式小雞麵28g(香辣味)(24)$9_1.jpg" class="img1"><img src="img/food/34200804  韓式小雞麵28g(香辣味)(24)$9_2.jpg" class="img2"><strong>34200804 韓式小雞麵28g(香辣味) 批發價 $9</strong></p><button class="btn btn-danger my-cart-btn" data-id="34200804"
+                    data-name="34200804 韓式小雞麵28g(香辣味)" data-price="9" data-quantity="1" data-image="img/food/34200804  韓式小雞麵28g(香辣味)(24)$9_1.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/34200808  好多魚餅乾90g(烤蝦口味)$50.jpg" class="img1"><strong>34200808
-                        好多魚餅乾90g(烤蝦口味) 批發價 $50</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                        好多魚餅乾90g(烤蝦口味) 批發價 $50</strong></p><button class="btn btn-danger my-cart-btn" data-id="34200808" data-name="34200808  好多魚餅乾90g(烤蝦口味" data-price="50" data-quantity="1" data-image="img/food/34200808  好多魚餅乾90g(烤蝦口味)$50.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/34200816 農心碗麵(泡菜味) $38.jpg"><strong>34200816 農心碗麵(泡菜味) 批發價
-                        $38</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $38</strong></p><button class="btn btn-danger my-cart-btn" data-id="34200816" data-name="34200816 農心碗麵(泡菜味)" data-price="38" data-quantity="1" data-image="img/food/34200816 農心碗麵(泡菜味) $38.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/34210746 農心超進化辛碗麵(豆腐泡菜味) $65.jpg"><strong>34210746 農心超進化辛碗麵(豆腐泡菜味)
-                        批發價 $65</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                        批發價 $65</strong></p><button class="btn btn-danger my-cart-btn" data-id="34210746" data-name="34210746 農心超進化辛碗麵(豆腐泡菜味)" data-price="65" data-quantity="1" data-image="img/food/34210746 農心超進化辛碗麵(豆腐泡菜味) $65.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/34210745 農心超進化辛碗麵(濃郁牛骨湯味) $65.jpg"><strong>34210745
-                        農心超進化辛碗麵(濃郁牛骨湯味) 批發價 $65</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        農心超進化辛碗麵(濃郁牛骨湯味) 批發價 $65</strong></p><button class="btn btn-danger my-cart-btn" data-id="34210745" data-name="34210745 農心超進化辛碗麵(濃郁牛骨湯味)" data-price="65" data-quantity="1" data-image="img/food/34210745 農心超進化辛碗麵(濃郁牛骨湯味) $65.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/34210738 農心魷魚海鮮味湯麵x4 $140.jpg"><strong>34210738 農心魷魚海鮮味湯麵x4 批發價
-                        $140</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $140</strong></p><button class="btn btn-danger my-cart-btn" data-id="34210738" data-name="34210738 農心魷魚海鮮味湯麵x4" data-price="140" data-quantity="1" data-image="img/food/34210738 農心魷魚海鮮味湯麵x4 $140.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/34210713 農心豆腐泡菜味x4 $200.jpg"><strong>34210713 農心豆腐泡菜味x4<br>批發價
-                        $200</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                        $200</strong></p><button class="btn btn-danger my-cart-btn" data-id="34210713" data-name="34210713 農心豆腐泡菜味x4" data-price="200" data-quantity="1" data-image="img/food/34210713 農心豆腐泡菜味x4 $200.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/34210739 農心炒碼麵x4 $200.jpg"><strong>34210739 農心炒碼麵x4<br>批發價
-                        $200</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $200</strong></p><button class="btn btn-danger my-cart-btn" data-id="34210739" data-name="34210739 農心炒碼麵x4" data-price="200" data-quantity="1" data-image="img/food/34210739 農心炒碼麵x4 $200.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/34200815 農心香辣海鮮烏龍麵x4 $115.jpg"><strong>34200815 農心香辣海鮮烏龍麵x4 批發價
-                        $115</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $115</strong></p><button class="btn btn-danger my-cart-btn" data-id="34200815" data-name="34200815 農心香辣海鮮烏龍麵x4" data-price="115" data-quantity="1" data-image="img/food/34200815 農心香辣海鮮烏龍麵x4 $115.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/34210701 農心浣熊炸醬烏龍麵x4 $150.jpg"><strong>34210701 農心浣熊炸醬烏龍麵x4 批發價
-                        $150</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $150</strong></p><button class="btn btn-danger my-cart-btn" data-id="34210701" data-name="34210701 農心浣熊炸醬烏龍麵x4" data-price="150" data-quantity="1" data-image="img/food/34210701 農心浣熊炸醬烏龍麵x4 $150.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/33160502 農心馬鈴薯麵x4 $155.jpg"><strong>33160502 農心馬鈴薯麵x4<br>批發價
-                        $155</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $155</strong></p><button class="btn btn-danger my-cart-btn" data-id="33160502" data-name="33160502 農心馬鈴薯麵x4" data-price="155" data-quantity="1" data-image="img/food/33160502 農心馬鈴薯麵x4 $155.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/33200717 農心爽口海鮮味烏龍麵x4 $160.jpg"><strong>33200717
-                        農心爽口海鮮味烏龍x4<br>批發價 $160</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        農心爽口海鮮味烏龍x4<br>批發價 $160</strong></p><button class="btn btn-danger my-cart-btn" data-id="33200717" data-name="33200717 農心爽口海鮮味烏龍麵x4" data-price="160" data-quantity="1" data-image="img/food/33200717 農心爽口海鮮味烏龍麵x4 $160.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/31090326 農心安成湯麵x4 $120.jpg"><strong>31090326 農心安成湯麵x4<br>批發價
-                        $120</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $120</strong></p><button class="btn btn-danger my-cart-btn" data-id="31090326" data-name="31090326 農心安成湯麵x4" data-price="120" data-quantity="1" data-image="img/food/31090326 農心安成湯麵x4 $120.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/34210733 農心辛辣白菜風味拉麵 $140.jpg"><strong>34210733 農心辛辣白菜風味拉麵<br>批發價
-                        $140</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $140</strong></p><button class="btn btn-danger my-cart-btn" data-id="34210733" data-name="34210733 農心辛辣白菜風味拉麵" data-price="140" data-quantity="1" data-image="img/food/34210733 農心辛辣白菜風味拉麵 $140.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/34210741 農心非油炸辛拉麵x4 $170.jpg"><strong>34210741 農心非油炸辛拉麵x4<br>批發價
-                        $170</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $170</strong></p><button class="btn btn-danger my-cart-btn" data-id="34210741" data-name="34210741 農心非油炸辛拉麵x4" data-price="170" data-quantity="1" data-image="img/food/34210741 農心非油炸辛拉麵x4 $170.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/33210801 明星評判屋鹽味拉麵x5 $165.jpg"><strong>33210801 明星評判屋鹽味拉麵x5<br>批發價
-                        $165</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $165</strong></p><button class="btn btn-danger my-cart-btn" data-id="33210801" data-name="33210801 明星評判屋鹽味拉麵x5" data-price="165" data-quantity="1" data-image="img/food/33210801 明星評判屋鹽味拉麵x5 $165.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/33210802 明星評判屋味噌拉麵x5 $165.jpg"><strong>33210802 明星評判屋味噌拉麵x5<br>批發價
-                        $165</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $165</strong></p><button class="btn btn-danger my-cart-btn" data-id="33210802" data-name="33210802 明星評判屋味噌拉麵x5" data-price="165" data-quantity="1" data-image="img/food/33210802 明星評判屋味噌拉麵x5 $165.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/33210803 明星評判屋豚骨拉麵x5 $165.jpg"><strong>33210803 明星評判屋豚骨拉麵x5<br>批發價
-                        $165</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $165</strong></p><button class="btn btn-danger my-cart-btn" data-id="33210803" data-name="33210803 明星評判屋豚骨拉麵x5" data-price="165" data-quantity="1" data-image="img/food/33210803 明星評判屋豚骨拉麵x5 $165.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/33210804 創意一品鹽味拉麵x5 $120.jpg"><strong>33210804 創意一品鹽味拉麵x5<br>批發價
-                        $120</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $120</strong></p><button class="btn btn-danger my-cart-btn" data-id="33210804" data-name="33210804 創意一品鹽味拉麵x5" data-price="120" data-quantity="1" data-image="img/food/33210804 創意一品鹽味拉麵x5 $120.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/33210805 創意一品味噌拉麵x5 $120.jpg"><strong>33210805 創意一品味噌拉麵x5<br>批發價
-                        $120</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
+                        $120</strong></p><button class="btn btn-danger my-cart-btn" data-id="33210805" data-name="33210805 創意一品味噌拉麵x5" data-price="120" data-quantity="1" data-image="img/food/33210805 創意一品味噌拉麵x5 $120.jpg">購入<img class="plus" src="img/+1.png"></button>
 
             </div>
             <div id="images" class="col-12 col-md-6 col-xl-4 col-xxl-3">
                 <p class="img"><img src="img/food/33210806 創意一品醬油拉麵x5 $120.jpg"><strong>33210806 創意一品醬油拉麵x5<br>批發價
-                        $120</strong></p><button class="btn btn-danger my-cart-btn" data-id="☆☆☆☆☆☆☆☆☆" data-name="☆☆☆☆☆☆☆☆☆" data-price="☆☆☆☆☆☆☆☆☆" data-quantity="1" data-image="☆☆☆☆☆☆☆☆☆">購入<img class="plus" src="img/+1.png"></button>
-
+                        $120</strong></p><button class="btn btn-danger my-cart-btn" data-id="33210806" data-name="33210806 創意一品醬油拉麵x5" data-price="120" data-quantity="1" data-image="img/food/33210806 創意一品醬油拉麵x5 $120.jpg">購入<img class="plus" src="img/+1.png"></button>
             </div>
         </div>
     </div>
@@ -2377,7 +2436,7 @@
 
 
     <form action="javascript:GoogleForm();" id="form" class="form">
-        <div>
+        <div class="content3">
             <legend id="contactbg">寄送地或聯絡方式</legend>
             <input size="30" required type="text" name="contact" id="address">
             </fieldset>

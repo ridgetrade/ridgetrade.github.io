@@ -5,11 +5,11 @@ $(function() {
 
     $goods.hide();
     $("#content2").show();
-    $("form,.badge,#shop").hide();
+    $("form,.badge,.shopcart,#shop").hide();
 
     $(".menu1").click(function() {
         $goods.fadeOut(300);
-        $(".goods1,.badge")
+        $(".goods1,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -18,7 +18,7 @@ $(function() {
 
     $(".menu2").click(function() {
         $goods.fadeOut(300);
-        $(".goods2,.badge")
+        $(".goods2,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -27,7 +27,7 @@ $(function() {
 
     $(".menu3").click(function() {
         $goods.fadeOut(300);
-        $(".goods3,.badge")
+        $(".goods3,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -36,7 +36,7 @@ $(function() {
 
     $(".menu4").click(function() {
         $goods.fadeOut(300);
-        $(".goods4,.badge")
+        $(".goods4,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -45,7 +45,7 @@ $(function() {
 
     $(".menu5").click(function() {
         $goods.fadeOut(300);
-        $(".goods5,.badge")
+        $(".goods5,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -54,7 +54,7 @@ $(function() {
 
     $(".menu6").click(function() {
         $goods.fadeOut(300);
-        $(".goods6,.badge")
+        $(".goods6,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -63,7 +63,7 @@ $(function() {
 
     $(".menu7").click(function() {
         $goods.fadeOut(300);
-        $(".goods7,.badge")
+        $(".goods7,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -72,7 +72,7 @@ $(function() {
 
     $(".menu8").click(function() {
         $goods.fadeOut(300);
-        $(".goods8,.badge")
+        $(".goods8,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -81,7 +81,7 @@ $(function() {
 
     $(".menu9").click(function() {
         $goods.fadeOut(300);
-        $(".goods9,.badge")
+        $(".goods9,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -90,7 +90,7 @@ $(function() {
 
     $(".menu10").click(function() {
         $goods.fadeOut(300);
-        $(".goods10,.badge")
+        $(".goods10,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -99,7 +99,7 @@ $(function() {
 
     $(".menu11").click(function() {
         $goods.fadeOut(300);
-        $(".goods11,.badge")
+        $(".goods11,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -108,7 +108,7 @@ $(function() {
 
     $(".menu12").click(function() {
         $goods.fadeOut(300);
-        $(".goods12,.badge")
+        $(".goods12,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -117,7 +117,7 @@ $(function() {
 
     $(".menu13").click(function() {
         $goods.fadeOut(300);
-        $(".goods13,.badge")
+        $(".goods13,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -126,7 +126,7 @@ $(function() {
 
     $(".menu14").click(function() {
         $goods.fadeOut(300);
-        $(".goods14,.badge")
+        $(".goods14,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -136,7 +136,7 @@ $(function() {
 
     $(".menu15").click(function() {
         $goods.fadeOut(300);
-        $(".goods15,.badge")
+        $(".goods15,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -145,7 +145,7 @@ $(function() {
 
     $(".menu16").click(function() {
         $goods.fadeOut(300);
-        $(".goods16,.badge")
+        $(".goods16,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -154,7 +154,7 @@ $(function() {
 
     $(".menu17").click(function() {
         $goods.fadeOut(300);
-        $(".goods17,.badge")
+        $(".goods17,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");
@@ -163,7 +163,7 @@ $(function() {
 
     $(".menu18").click(function() {
         $goods.fadeOut(300);
-        $(".goods18,.badge")
+        $(".goods18,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
         $menu.removeClass("active");

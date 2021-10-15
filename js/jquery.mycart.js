@@ -229,7 +229,7 @@
                 '<table class="table table-hover table-responsive" id="' + idCartTable + '"></table>' +
                 '</div>' +
                 '<div class="modal-footer">' +
-                '<button type="button" class="btn btn-primary ' + classCheckoutCart + '">價格以報價為主</button>' +
+                '<button type="button" class="btn btn-primary ' + classCheckoutCart + '">寄出採購單(價格以報價為主)</button>' +
                 '</div>' +
                 '</div>' +
                 '</div>' +
@@ -316,7 +316,6 @@
         $cartIcon.click(function() {
             options.showCheckoutModal ? showModal() : options.clickOnCartIcon($cartIcon, ProductManager.getAllProducts(), ProductManager.getTotalPrice(), ProductManager.getTotalQuantity());
         });
-
         $(document).on("input", "." + classProductQuantity, function() {
             var price = $(this).closest("tr").data("price");
             var id = $(this).closest("tr").data("id");
