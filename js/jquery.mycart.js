@@ -231,7 +231,6 @@
                 '</div>' +
                 '<div class="modal-footer">' +
                 '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>' +
-
                 '<button type="button" class="btn btn-primary ' + classCheckoutCart + '">寄出採購單(價格以報價為主)</button>' +
                 '</div>' +
                 '</div>' +

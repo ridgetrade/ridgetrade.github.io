@@ -177,7 +177,49 @@
         .badge-notify {
             background: red;
             position: fixed;
-            top: 88vh;
-            right: 2.8vw;
+            top: 0.5vh;
+            right: 45vw;
+            z-index: 99999;
+        }
+        
+        .topmenu {
+            position: fixed;
+            top: 0;
+            right: 2.65vw;
             z-index: 9999;
+        }
+        
+        .goods1,
+        .goods2,
+        .goods3,
+        .goods4,
+        .goods5,
+        .goods6,
+        .goods7,
+        .goods8,
+        .goods9,
+        .goods10,
+        .goods11,
+        .goods12,
+        .goods13,
+        .goods14,
+        .goods15,
+        .goods16,
+        .goods17,
+        .goods18 {
+            margin-top: 50px;
+        }
+        
+        .allmenu {
+            background-color: white;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .badge-notify {
+                background: red;
+                position: fixed;
+                top: 0.5vh;
+                right: 1.5vw;
+                z-index: 99999;
+            }
         }

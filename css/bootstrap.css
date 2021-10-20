@@ -1971,6 +1971,7 @@ progress {
 .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    min-height: 0px !important;
 }
 
 @media (max-width: 575.98px) {

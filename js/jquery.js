@@ -1,14 +1,14 @@
 $(function() {
 
-    var $goods = $('.goods1,.goods2,.goods3,.goods4,.goods5,.goods6,.goods7,.goods8,.goods9,.goods10,.goods11,.goods12,.goods13,.goods14,.goods15,.goods16,.goods17,.goods18,#content2');
+    var $goods = $('.goods1,.goods2,.goods3,.goods4,.goods5,.goods6,.goods7,.goods8,.goods9,.goods10,.goods11,.goods12,.goods13,.goods14,.goods15,.goods16,.goods17,.goods18,#content2,.main');
     var $menu = $('.menu1,.menu2,.menu3,.menu4,.menu5,.menu6,.menu7,.menu8,.menu9,.menu10,.menu11,.menu12,.menu13,.menu14,.menu15,.menu16,.menu17,.menu18')
 
     $goods.hide();
-    $("#content2").show();
+    $("#content2,.main").show();
     $("form,.badge,.shopcart,#shop").hide();
-
     $(".menu1").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu")
         $(".goods1,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -204,4 +204,7 @@ $(function() {
         .on('click', function() {
             $(this).find('strong').stop(true).animate({ bottom: '0px' }, duration);
         });
+
+
+
 });
