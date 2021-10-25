@@ -187,14 +187,14 @@ button {
     position: fixed;
     top: 0.5vh;
     right: 45vw;
-    z-index: 99;
+    z-index: 1001;
 }
 
 .topmenu {
     position: fixed;
     top: 0;
     right: 2.65vw;
-    z-index: 9;
+    z-index: 1000;
 }
 
 .goods1,
@@ -228,6 +228,6 @@ button {
         position: fixed;
         top: 0.5vh;
         right: 1.5vw;
-        z-index: 99;
+        z-index: 1001;
     }
 }
