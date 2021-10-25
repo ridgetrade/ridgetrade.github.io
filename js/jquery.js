@@ -8,7 +8,7 @@ $(function() {
     $("form,.badge,.shopcart,#shop").hide();
     $(".menu1").click(function() {
         $goods.fadeOut(300);
-        $(".allmenu").addClass("topmenu")
+        $(".allmenu").addClass("topmenu");
         $(".goods1,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -18,6 +18,7 @@ $(function() {
 
     $(".menu2").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods2,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -27,6 +28,7 @@ $(function() {
 
     $(".menu3").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods3,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -36,6 +38,7 @@ $(function() {
 
     $(".menu4").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods4,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -45,6 +48,7 @@ $(function() {
 
     $(".menu5").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods5,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -54,6 +58,7 @@ $(function() {
 
     $(".menu6").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods6,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -63,6 +68,7 @@ $(function() {
 
     $(".menu7").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods7,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -72,6 +78,7 @@ $(function() {
 
     $(".menu8").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods8,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -81,6 +88,7 @@ $(function() {
 
     $(".menu9").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods9,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -90,6 +98,7 @@ $(function() {
 
     $(".menu10").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods10,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -99,6 +108,7 @@ $(function() {
 
     $(".menu11").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods11,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -108,6 +118,7 @@ $(function() {
 
     $(".menu12").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods12,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -117,6 +128,7 @@ $(function() {
 
     $(".menu13").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods13,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -126,6 +138,7 @@ $(function() {
 
     $(".menu14").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods14,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -136,6 +149,7 @@ $(function() {
 
     $(".menu15").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods15,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -145,6 +159,7 @@ $(function() {
 
     $(".menu16").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods16,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -154,6 +169,7 @@ $(function() {
 
     $(".menu17").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods17,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
@@ -163,6 +179,7 @@ $(function() {
 
     $(".menu18").click(function() {
         $goods.fadeOut(300);
+        $(".allmenu").addClass("topmenu");
         $(".goods18,.badge,.shopcart")
             .delay(300)
             .fadeIn(250);
