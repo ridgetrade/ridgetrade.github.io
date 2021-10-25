@@ -223,14 +223,14 @@
                 '<div class="modal-dialog" role="document">' +
                 '<div class="modal-content">' +
                 '<div class="modal-header">' +
-                '<button type="button" class="btn btn-default" data-bs-dismiss="modal"  aria-label="Close"><span aria-hidden="true">Close</span></button>' +
+                '<button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"  aria-label="Close"><span aria-hidden="true">Close</span></button>' +
                 '<h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart"></span> 購物車</h4>' +
                 '</div>' +
                 '<div class="modal-body">' +
                 '<table class="table table-hover table-responsive" id="' + idCartTable + '"></table>' +
                 '</div>' +
                 '<div class="modal-footer">' +
-                '<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>' +
+                '<button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>' +
                 '<button type="button" class="btn btn-primary ' + classCheckoutCart + '">寄出採購單(價格以報價為主)</button>' +
                 '</div>' +
                 '</div>' +
@@ -250,8 +250,8 @@
                     '<tr title="' + this.summary + '" data-id="' + this.id + '" data-price="' + this.price + '">' +
                     '<td class="text-center" style="width: 50px;"><img width="50px" height="50px" src="' + this.image + '"/></td>' +
                     '<td>' + this.name + '</td>' +
-                    '<td title="Unit Price" class="text-right">' + options.currencySymbol + MathHelper.getRoundedNumber(this.price) + '</td>' +
-                    '<td title="Quantity"><input type="number" min="1" style="width: 70px;" class="' + classProductQuantity + '" value="' + this.quantity + '"/></td>' +
+                    '<td title="Unit Price" class="text-right" style ="display:none">' + options.currencySymbol + MathHelper.getRoundedNumber(this.price) + '</td>' +
+                    '<td title="Quantity"><input type="number" min="1" style="width: 50px;" class="' + classProductQuantity + '" value="' + this.quantity + '"/></td>' +
                     '<td title="Total" class="text-right ' + classProductTotal + '">' + options.currencySymbol + MathHelper.getRoundedNumber(total) + '</td>' +
                     '<td title="Remove from Cart" class="text-center" style="width: 30px;"><a href="javascript:void(0);" class="btn btn-xs btn-danger ' + classProductRemove + '">X</a></td>' +
                     '</tr>'
@@ -262,7 +262,6 @@
                 '<tr>' +
                 '<td></td>' +
                 '<td><strong>Total</strong></td>' +
-                '<td></td>' +
                 '<td></td>' +
                 '<td class="text-right"><strong id="' + idGrandTotal + '"></strong></td>' +
                 '<td></td>' +

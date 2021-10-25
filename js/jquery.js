@@ -178,17 +178,8 @@ $(function() {
         });
     });
 
-    // var $images = $('#images .btn')
-
-    // $images.on('click', function () {
-    //     find('.plus').stop(true).animate({ left: ['50px', 'swing'], opacity: '100' }, 200, function () {
-    //     find('.plus').stop(true).animate({ left: '18px', opacity: '0' }, 250);
-    //     });
-    // });
 
     var duration = 200;
-
-    // images ----------------------------------------
 
     var $images = $('#images p');
 
