@@ -162,6 +162,7 @@ button {
 }
 
 .info2 {
+    position: absolute;
     z-index: 999;
     position: fixed;
     bottom: 0px;
