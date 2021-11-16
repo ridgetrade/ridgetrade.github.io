@@ -232,3 +232,8 @@ button {
         z-index: 1001;
     }
 }
+
+.info2 {
+    background-color: white;
+    width: 100vw;
+}
